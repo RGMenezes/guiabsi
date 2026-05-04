@@ -36,7 +36,6 @@ export default function WhatsAppPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>05 — Comunidade</p>
         <h1 className={styles.title}>Grupos do WhatsApp</h1>
         <p className={styles.subtitle}>
           Todos os grupos organizados. Entre nos que fazem sentido pro seu

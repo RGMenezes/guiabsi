@@ -21,7 +21,7 @@ const navCards = [
     href: "/apadrinhamento",
     tag: "03",
     title: "Apadrinhamento",
-    desc: "Conectamos cada calouro a um veterano. Mentoria direta, sem enrolação.",
+    desc: "Conectamos cada calouro a um veterano. Mentoria direta.",
     color: "#a78bfa",
   },
   {
@@ -38,6 +38,13 @@ const navCards = [
     desc: "Todos os grupos organizados por turma e área. Entre agora e fique por dentro.",
     color: "#4ade80",
   },
+  {
+    href: "/links",
+    tag: "06",
+    title: "Links Importantes",
+    desc: "Todos os portais do IFF organizados: Acadêmico, SUAP, Moodle, Seleções e mais.",
+    color: "#f472b6",
+  },
 ];
 
 export default function Home() {
@@ -53,7 +60,7 @@ export default function Home() {
           </h1>
           <p className={styles.heroDesc}>
             Tudo que você precisa saber para sobreviver — e prosperar — no curso de
-            Sistemas de Informação. Sem rodeios.
+            Sistemas de Informação.
           </p>
         </section>
 
@@ -65,7 +72,7 @@ export default function Home() {
               className={styles.card}
               style={{ "--card-accent": card.color } as React.CSSProperties}
             >
-              <span className={styles.cardTag}>{card.tag}</span>
+              {/* <span className={styles.cardTag}>{card.tag}</span> */}
               <h2 className={styles.cardTitle}>{card.title}</h2>
               <p className={styles.cardDesc}>{card.desc}</p>
               <span className={styles.cardArrow}>→</span>

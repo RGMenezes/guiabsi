@@ -23,8 +23,7 @@ export default function ApadrinhamentoPage() {
       <Nav />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
-
-        <p className={styles.tag}>03 — Mentoria</p>
+        
         <h1 className={styles.title}>Apadrinhamento</h1>
         <p className={styles.subtitle}>
           Uma rede de mentoria direta. Cada calouro conectado a um veterano que

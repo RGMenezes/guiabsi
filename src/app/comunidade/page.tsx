@@ -25,8 +25,7 @@ const grupos = [
     name: "Sete Capitães",
     color: "#38bdf8",
     desc: `Trabalho multidisciplinar de alto nível. O pessoal de BSI cuida
-    da telemetria, sistemas de bordo e análise de dados de voo. É computação
-    de alta precisão aplicada a aeronaves remanufaturadas. Se você quer
+    da telemetria, sistemas de bordo e análise de dados de voo. Se você quer
     dados, sensores e análise real, esse time é pra você.`,
   },
 ];
@@ -53,7 +52,6 @@ export default function ComunidadePage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>04 — Comunidade</p>
         <h1 className={styles.title}>Comunidade & Equipes</h1>
         <p className={styles.subtitle}>
           Onde a teoria vira prática. Equipes, espaços e grupos que fazem a

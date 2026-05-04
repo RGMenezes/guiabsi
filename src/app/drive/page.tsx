@@ -9,7 +9,6 @@ export default function DrivePage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>03 — Recurso</p>
         <h1 className={styles.title}>Drive de Provas</h1>
         <p className={styles.subtitle}>
           O repositório colaborativo com exames anteriores. A ferramenta mais

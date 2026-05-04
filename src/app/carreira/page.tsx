@@ -24,7 +24,6 @@ export default function CarreiraPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>02 — Carreira</p>
         <h1 className={styles.title}>Carreira & Oportunidades</h1>
         <p className={styles.subtitle}>
           Os portais que você precisa dominar, as bolsas disponíveis e as
