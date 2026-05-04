@@ -62,14 +62,14 @@ export default function ApadrinhamentoPage() {
 
         <div className={styles.divider} />
 
-        {/* <a
-          href="#"
+        <a
+          href="https://forms.gle/mKffnbdotMWouqCQ6"
           className={styles.ctaBtn}
           target="_blank"
           rel="noopener noreferrer"
         >
           Preencher formulário →
-        </a> */}
+        </a>
         <p style={{ marginTop: "12px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
           {/* TODO: substituir href="#" pelo link do formulário de inscrição */}
         </p>
