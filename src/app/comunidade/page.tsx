@@ -21,11 +21,11 @@ const grupos = [
     Competições nacionais de robótica com a galera do IFF.`,
   },
   {
-    tag: "Aerodesign",
+    tag: "Barco Elétrico",
     name: "Sete Capitães",
     color: "#38bdf8",
     desc: `Trabalho multidisciplinar de alto nível. O pessoal de BSI cuida
-    da telemetria, sistemas de bordo e análise de dados de voo. Se você quer
+    da telemetria, sistemas de bordo e análise de dados. Se você quer
     dados, sensores e análise real, esse time é pra você.`,
   },
 ];

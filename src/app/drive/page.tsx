@@ -45,7 +45,7 @@ export default function DrivePage() {
         <div className={styles.divider} />
 
         <a
-          href="#"
+          href="https://drive.google.com/drive/folders/1nhrcyKYEns-JBUoH1tpj4id01QOGTrlT?usp=drive_link"
           className={styles.ctaBtn}
           target="_blank"
           rel="noopener noreferrer"

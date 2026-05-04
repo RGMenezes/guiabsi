@@ -70,6 +70,12 @@ const portais = [
         desc: "Portal institucional geral. Notícias, contatos e navegação para os outros sistemas.",
         tag: null,
       },
+      {
+        nome: "PPC",
+        url: "https://portal1.iff.edu.br/nossos-campi/campos-centro/cursos-nova-interface/cursos-superiores/pasta-com-documentos-do-curso-de-bacharelado-em-sistemas-de-informacao/resolucao-consup-ifflu-n-304-de-23-de-janeiro-de-2025-2-1.pdf/view",
+        desc: "Plano de curso do Bacharelado em Sistemas de Informação. Tudo que você precisa saber sobre o curso, desde a matriz curricular até as competências que deve desenvolver.",
+        tag: null,
+      },
     ],
   },
 ];

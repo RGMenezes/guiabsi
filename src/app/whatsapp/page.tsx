@@ -8,23 +8,21 @@ const grupos = [
   {
     categoria: "Turmas",
     items: [
-      { nome: "Turma 2025.1", link: "#" },
-      { nome: "Turma 2025.2", link: "#" },
+      { nome: "Turma 2022.1", link: "https://chat.whatsapp.com/HIIuoNmAeIdKU1F69lQKC7" },
     ],
   },
   {
     categoria: "Centro Acadêmico",
     items: [
-      { nome: "CA — BSI Geral", link: "#" },
-      { nome: "Avisos Oficiais", link: "#" },
+      { nome: "BSI Geral", link: "https://chat.whatsapp.com/L5C2FIyzkeQEbMWkaTrmlC" },
+      { nome: "Ensino Superior", link: "https://chat.whatsapp.com/L27CtbuNxljGFnFMnIxCWx?mode=wwc" },
     ],
   },
   {
-    categoria: "Equipes & Projetos",
+    categoria: "Outros",
     items: [
-      { nome: "Goytaborgs — Robótica", link: "#" },
-      { nome: "Sete Capitães — Aerodesign", link: "#" },
-      { nome: "Áurea — Empresa Júnior", link: "#" },
+      { nome: "Achados e Perdidos", link: "https://chat.whatsapp.com/D3j4sh1mDBVIuWcWI2cPai" },
+      { nome: "Vendas IFF", link: "https://chat.whatsapp.com/Di7uuDAgIJQETNmyodJmlq" },
     ],
   },
 ];
