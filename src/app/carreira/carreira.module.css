@@ -1,0 +1,85 @@
+.bolsaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.infoTag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.lista {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.lista li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--hero-accent);
+}
+
+/* Grid para os links de canais de apoio */
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Estilo do link como um card clicável */
+.portalLink {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: var(--fg);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o rato ou focar */
+.portalLink:hover {
+  border-color: var(--hero-accent);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Estilo do título dentro do link */
+.portalLink strong {
+  color: var(--hero-accent);
+  font-size: 1.1rem;
+}
+
+/* Estilo da descrição dentro do link */
+.portalLink span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+/* Estilo específico para o item que não é link (Coordenação) */
+div.portalLink {
+  cursor: default;
+  opacity: 0.9;
+}
