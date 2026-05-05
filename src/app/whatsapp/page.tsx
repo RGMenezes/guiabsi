@@ -8,7 +8,7 @@ const grupos = [
   {
     categoria: "Turmas",
     items: [
-      { nome: "Turma 2022.1", link: "https://chat.whatsapp.com/HIIuoNmAeIdKU1F69lQKC7" },
+      { nome: "Turma 2026.1", link: "https://chat.whatsapp.com/HIIuoNmAeIdKU1F69lQKC7" },
     ],
   },
   {
