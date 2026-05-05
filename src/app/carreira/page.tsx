@@ -2,15 +2,6 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import Nav from "@/components/Nav";
 
-const portals = [
-  { name: "Acadêmico", desc: "Diários, boletins e matrícula semestral." },
-  { name: "Moodle / Google Classroom", desc: "Salas virtuais: materiais, tarefas e provas online." },
-  { name: "SUAP", desc: "Trancamentos, alteração de dados e processos internos." },
-  { name: "Portal de Seleções", desc: "Editais de bolsas (DAAT) e prazos de trancamento." },
-  { name: "Portal de Eventos", desc: "Inscrições em palestras e semanas acadêmicas para horas complementares." },
-  { name: "Portal de Requerimentos", desc: "Declarações para transporte universitário e documentos oficiais." },
-];
-
 const bolsas = [
   { name: "Monitoria", desc: "Ajude outros alunos nas matérias que você domina e receba por isso." },
   { name: "Pesquisa e Extensão", desc: "Leve tecnologia para a comunidade ou para o laboratório." },
@@ -26,22 +17,8 @@ export default function CarreiraPage() {
 
         <h1 className={styles.title}>Carreira & Oportunidades</h1>
         <p className={styles.subtitle}>
-          Os portais que você precisa dominar, as bolsas disponíveis e as
-          dicas para não perder oportunidades logo no início.
+          Bolsas disponíveis e as dicas para não perder oportunidades logo no início.
         </p>
-
-        <div className={styles.section}>
-          <p className={styles.sectionTitle}>Portais Essenciais</p>
-          <ul className={styles.list}>
-            {portals.map((portal) => (
-              <li key={portal.name}>
-                <span>
-                  <strong>{portal.name}:</strong> {portal.desc}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
 
         <div className={styles.divider} />
 
