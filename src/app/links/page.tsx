@@ -19,6 +19,12 @@ const portais = [
         desc: "Foco administrativo: trancamentos, alteração de dados cadastrais e processos internos.",
         tag: "essencial",
       },
+      {
+        nome: "Grade de Horários",
+        url: "/docs/BSI_2026_1.pdf",
+        desc: "Horários de todos os períodos de BSI, versão 2026-1.",
+        tag: "essencial",
+      },
     ],
   },
   {
@@ -58,6 +64,12 @@ const portais = [
   {
     categoria: "Documentos & Serviços",
     items: [
+      {
+        nome: "Horas Complementares",
+        url: "https://inf.centro.iff.edu.br/",
+        desc: "Site para registro de horas complementares.",
+        tag: "essencial",
+      },
       {
         nome: "Portal de Requerimentos",
         url: "https://requerimentos.centro.iff.edu.br/",

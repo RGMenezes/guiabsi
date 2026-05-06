@@ -7,7 +7,7 @@ const navCards = [
     href: "/links",
     tag: "Acesso Diário",
     title: "Portais e Sistemas",
-    desc: "SUAP, Moodle, Registro Acadêmico e o Portal de Periódicos da CAPES.",
+    desc: "SUAP, Moodle, Grade, Registro Acadêmico e o Portal de Periódicos da CAPES.",
     color: "#4ade80",
   },
   {
@@ -27,7 +27,7 @@ const navCards = [
   {
     href: "/grade",
     tag: "Matriz 2025",
-    title: "Grade e Trilhas",
+    title: "Matriz Curricular",
     desc: "Os 8 períodos e as 4 trilhas: Algoritmos, Infra, Software e Gestão.",
     color: "#38bdf8",
   },
@@ -35,7 +35,7 @@ const navCards = [
     href: "/accs",
     tag: "300h Obrigatórias",
     title: "Horas Complementares",
-    desc: "Tabelas de conversão e regras de validação para a nova matriz.",
+    desc: "O que conta, o que tem paridade fixa e como validar com a coordenação.",
     color: "#ff6b35",
   },
   {
@@ -56,7 +56,7 @@ const navCards = [
     href: "/infra",
     tag: "Laboratórios",
     title: "Equipes e Espaços",
-    desc: "Empresa Júnior, Laboratórios de Hardware/Redes e Biblioteca.",
+    desc: "Goytaborgs, Sete Capitães, Goytacar E-Racing, Áurea e os labs do campus.",
     color: "#f472b6",
   },
   {
@@ -80,8 +80,8 @@ export default function Home() {
             <span className={styles.heroAccent}>Estudante BSI</span>
           </h1>
           <p className={styles.heroDesc}>
-            Central de informações atualizada conforme o 
-            <strong> PPC 2025 (Resolução CONSUP 304/2025)</strong>. 
+            Central de informações atualizada conforme o{" "}
+            <strong>PPC 2025 (Resolução CONSUP 304/2025)</strong>.
             Tudo o que você precisa em um só lugar.
           </p>
         </section>

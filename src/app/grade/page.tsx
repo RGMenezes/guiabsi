@@ -1,16 +1,15 @@
 import Link from "next/link";
-import styles from "../inner.module.css"; 
+import styles from "../inner.module.css";
 import gradeStyles from "./grade.module.css";
 import Nav from "@/components/Nav";
 
-// Ajustado conforme as cores e nomes da imagem do PPC
 const trilhas = {
-  algoritmos: { nome: "Algoritmos e Estrutura de Dados", color: "#4ade80" }, // Verde
-  infra: { nome: "Infraestrutura de TI", color: "#38bdf8" }, // Azul
-  software: { nome: "Desenvolvimento de Software", color: "#a78bfa" }, // Roxo
-  gestao: { nome: "Gestão e Projetos de TI", color: "#fb923c" }, // Laranja
-  outros: { nome: "Outros", color: "#94a3b8" }, // Cinza
-  eletiva: { nome: "Eletivas Obrigatórias", color: "#526580" }, // Cinza escuro
+  algoritmos: { nome: "Algoritmos e Estruturas de Dados", color: "#4ade80" },
+  infra: { nome: "Infraestrutura de TI", color: "#38bdf8" },
+  software: { nome: "Desenvolvimento de Software", color: "#a78bfa" },
+  gestao: { nome: "Gestão e Projetos de TI", color: "#fb923c" },
+  outros: { nome: "Outros / Base", color: "#94a3b8" },
+  eletiva: { nome: "Eletivas", color: "#526580" },
 };
 
 const matrizOficial = [
@@ -22,7 +21,7 @@ const matrizOficial = [
       { nome: "Fundamentos de SI", h: "60h", info: trilhas.outros },
       { nome: "Introdução à Informática", h: "60h", info: trilhas.outros },
       { nome: "Lógica para Computação", h: "60h", info: trilhas.outros },
-      { nome: "Álgebra Linear e Geom. Analítica", h: "80h" },
+      { nome: "Álgebra Linear e Geom. Analítica", h: "80h", info: trilhas.outros },
     ],
   },
   {
@@ -31,8 +30,8 @@ const matrizOficial = [
       { nome: "Prog. Orientada a Objetos", h: "80h", info: trilhas.algoritmos },
       { nome: "Análise Orientada a Objetos", h: "60h", info: trilhas.software },
       { nome: "Engenharia de Software", h: "60h", info: trilhas.software },
-      { nome: "Arq. de Computadores", h: "80h", info: trilhas.infra },
-      { nome: "Cálculo", h: "120h" },
+      { nome: "Org. e Arq. de Computadores", h: "80h", info: trilhas.infra },
+      { nome: "Cálculo", h: "120h", info: trilhas.outros },
     ],
   },
   {
@@ -42,8 +41,8 @@ const matrizOficial = [
       { nome: "Processo de Desenv. de Software", h: "60h", info: trilhas.software },
       { nome: "Fundamentos de Banco de Dados", h: "80h", info: trilhas.infra },
       { nome: "Sistemas Operacionais", h: "80h", info: trilhas.infra },
-      { nome: "Administração", h: "60h" },
-      { nome: "Estatística", h: "60h" },
+      { nome: "Administração", h: "60h", info: trilhas.gestao },
+      { nome: "Estatística", h: "60h", info: trilhas.outros },
     ],
   },
   {
@@ -59,10 +58,10 @@ const matrizOficial = [
   {
     periodo: "5º Período",
     disciplinas: [
-      { nome: "Pesquisa Operacional", h: "60h", info: trilhas.outros },
+      { nome: "Lab. de Orientação a Objetos", h: "80h", info: trilhas.software },
       { nome: "Gerência de Projetos", h: "80h", info: trilhas.gestao },
       { nome: "Programação Web", h: "80h", info: trilhas.software },
-      { nome: "Laboratório de OO", h: "80h", info: trilhas.software },
+      { nome: "Pesquisa Operacional", h: "60h", info: trilhas.outros },
       { nome: "Inteligência Computacional", h: "60h", info: trilhas.software },
       { nome: "Projeto de Extensão I", h: "80h", info: trilhas.algoritmos },
     ],
@@ -71,11 +70,11 @@ const matrizOficial = [
     periodo: "6º Período",
     disciplinas: [
       { nome: "Metodologia Científica", h: "80h", info: trilhas.outros },
+      { nome: "Sistema de Suporte à Decisão", h: "80h", info: trilhas.software },
       { nome: "Gerência de Processos", h: "60h", info: trilhas.gestao },
-      { nome: "Sist. Suporte à Decisão", h: "80h", info: trilhas.software },
       { nome: "Segurança da Informação", h: "60h", info: trilhas.infra },
-      { nome: "Direito, Ética e Cidadania", h: "60h" },
-      { nome: "Projeto de Extensão II", h: "100h", info: trilhas.algoritmos },
+      { nome: "Direito, Ética e Cidadania", h: "60h", info: trilhas.outros },
+      { nome: "Projeto de Extensão II", h: "100h", info: trilhas.infra },
     ],
   },
   {
@@ -84,18 +83,18 @@ const matrizOficial = [
       { nome: "Projeto de Graduação I", h: "80h", info: trilhas.outros },
       { nome: "Gestão da Qualidade", h: "80h", info: trilhas.gestao },
       { nome: "Engenharia do Conhecimento", h: "60h", info: trilhas.software },
+      { nome: "Empreendedorismo", h: "40h", info: trilhas.gestao },
       { nome: "Sistemas Distribuídos", h: "60h", info: trilhas.infra },
-      { nome: "Empreendedorismo", h: "40h"},
       { nome: "Projeto de Extensão III", h: "100h", info: trilhas.software },
     ],
   },
   {
     periodo: "8º Período",
     disciplinas: [
-      { nome: "Projeto de Graduação II", h: "40h", info: trilhas.outros },
-      { nome: "Gestão de TI", h: "60h", info: trilhas.gestao },
+      { nome: "Projeto de Graduação II (TCC)", h: "40h", info: trilhas.outros },
       { nome: "Eletiva 1", h: "80h", info: trilhas.eletiva },
       { nome: "Eletiva 2", h: "60h", info: trilhas.eletiva },
+      { nome: "Gestão de TI", h: "60h", info: trilhas.gestao },
       { nome: "Projeto de Extensão IV", h: "100h", info: trilhas.gestao },
     ],
   },
@@ -107,15 +106,18 @@ export default function GradePage() {
       <Nav />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
-        <h1 className={styles.title}>Matriz Curricular 2025</h1>
+
+        <p className={styles.tag}>Matriz 2025.1</p>
+        <h1 className={styles.title}>Matriz Curricular</h1>
         <p className={styles.subtitle}>
-          Visualização por Trilhas Formativas conforme o novo PPC.
+          8 semestres, 3.000h totais. Noturno, matrícula por componente curricular.
+          Mínimo 8 e máximo 16 semestres para integralizar (máx. 2 trancamentos).
         </p>
 
         <div className={gradeStyles.legenda}>
           {Object.values(trilhas).map((t) => (
             <div key={t.nome} className={gradeStyles.legendaItem}>
-              <span className={gradeStyles.dot} style={{ backgroundColor: t.color }}></span>
+              <span className={gradeStyles.dot} style={{ backgroundColor: t.color }} />
               <small>{t.nome}</small>
             </div>
           ))}
@@ -127,10 +129,10 @@ export default function GradePage() {
               <p className={gradeStyles.periodoLabel}>{semestre.periodo}</p>
               <ul className={gradeStyles.lista}>
                 {semestre.disciplinas.map((disc, idx) => (
-                  <li 
-                    key={idx} 
+                  <li
+                    key={idx}
                     className={gradeStyles.disciplina}
-                    style={{ borderLeft: `4px solid ${disc.info?.color}` }}
+                    style={{ borderLeft: `4px solid ${disc.info?.color ?? "#333"}` }}
                   >
                     <span>{disc.nome}</span>
                     <span className={gradeStyles.hora}>{disc.h}</span>
@@ -139,6 +141,12 @@ export default function GradePage() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className={styles.tip} style={{ marginTop: "32px" }}>
+          <strong>Eletivas:</strong> os temas das 2 eletivas do 8º período são definidos
+          pelo NDE a cada semestre. Não é você que escolhe — o NDE define o que será
+          ofertado naquele semestre.
         </div>
       </main>
     </>

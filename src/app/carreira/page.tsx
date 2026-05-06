@@ -4,10 +4,10 @@ import carreiraStyles from "./carreira.module.css";
 import Nav from "@/components/Nav";
 
 const bolsas = [
-  { name: "Monitoria", desc: "Apoio a disciplinas do núcleo básico ou específico. Ótimo para revisar conteúdo." },
-  { name: "Pesquisa (PIBIC/PIBITI)", desc: "Iniciação científica com foco em inovação tecnológica e acadêmica." },
-  { name: "Extensão", desc: "Projetos que levam o conhecimento do BSI para a comunidade externa." },
-  { name: "Treinamento e Dev", desc: "Bolsas para atuar no desenvolvimento de sistemas internos do IFF." },
+  { name: "Monitoria", desc: "Apoio a disciplinas do núcleo básico ou específico. Ótimo para revisar conteúdo e já conta como ACC (Tabela 6, sem limite)." },
+  { name: "Pesquisa (PIBIC/PIBITI)", desc: "Iniciação científica com foco em inovação tecnológica e acadêmica. Conta como ACC pela Tabela 6." },
+  { name: "Extensão", desc: "Projetos que levam o conhecimento do BSI para a comunidade externa. Conta como ACC pela Tabela 6." },
+  { name: "Desenvolvimento Institucional", desc: "Trabalhe no código dos sistemas que o IFF usa. Currículo de peso e também conta como ACC." },
 ];
 
 export default function CarreiraPage() {
@@ -19,10 +19,10 @@ export default function CarreiraPage() {
 
         <h1 className={styles.title}>Carreira & Oportunidades</h1>
         <p className={styles.subtitle}>
-          Tudo sobre bolsas, o mercado de trabalho e como validar suas experiências.
+          Tudo sobre bolsas, estágio e como aproveitar experiências de carreira
+          dentro do curso.
         </p>
 
-        {/* Seção de Bolsas */}
         <div className={styles.section}>
           <p className={styles.sectionTitle}>Bolsas: Ganhar para Aprender</p>
           <div className={carreiraStyles.bolsaGrid}>
@@ -37,41 +37,47 @@ export default function CarreiraPage() {
 
         <div className={styles.divider} />
 
-        {/* Seção de Estágio - Informação precisa do PPC */}
         <div className={styles.section}>
           <p className={styles.sectionTitle}>Estágio (PPC 2025)</p>
           <div className={styles.body}>
             <p>
-              O estágio curricular no BSI é <strong>não obrigatório (optativo)</strong>. 
-              Para ser validado, deve ter carga mínima de 200h e contrato oficial (TCE).
+              O estágio curricular no BSI é <strong>não obrigatório (optativo)</strong>.
+              Se você fizer, precisa de contrato oficial (TCE) e carga mínima de{" "}
+              <strong>200 horas</strong>. Estágio sem contrato não conta nada.
             </p>
-            <div className={carreiraStyles.infoTag}>
-              Regra: Máximo de 30h semanais e 6h diárias.
-            </div>
+            <p>
+              Tanto o estágio quanto o emprego na área contam como ACC pela{" "}
+              <strong>Tabela 6</strong> (sem limite de aproveitamento). As horas do
+              certificado valem diretamente — não tem fórmula de conversão.
+            </p>
           </div>
         </div>
 
         <div className={styles.divider} />
 
-        {/* Conexão com ACCs */}
         <div className={styles.section}>
           <p className={styles.sectionTitle}>ACCs e Carreira</p>
           <div className={styles.body}>
             <p>
-              Toda experiência de carreira pode virar <strong>horas de ACC</strong> (Grupo I):
+              Monitoria, bolsas, estágio e emprego na área entram todos na{" "}
+              <strong>Tabela 6 de ACCs</strong> — sem teto e sem conversão.
+              Submeta os comprovantes à coordenação para validação.
             </p>
-            <ul className={carreiraStyles.lista}>
-              <li><strong>Estágio:</strong> Cada 60h trabalhadas = 20h de ACC.</li>
-              <li><strong>Monitoria/Bolsa:</strong> 1 semestre = 40h de ACC.</li>
-              <li><strong>Trabalho em TI:</strong> Experiência profissional também pode ser validada.</li>
-            </ul>
+            <p>
+              Para ver a lista completa de atividades válidas e as paridades da
+              Tabela 7 (publicações, certificações etc.), acesse a página de{" "}
+              <Link href="/accs" style={{ color: "var(--accent)" }}>
+                Horas Complementares
+              </Link>.
+            </p>
           </div>
         </div>
 
         <div className={styles.tip}>
-          <strong>Dica de veterano:</strong> Não foque apenas no dinheiro. Projetos de 
-          <strong> Iniciação Científica</strong> e <strong>Empresa Júnior</strong> contam 
-          muito mais no currículo para vagas de Big Techs do que estágios em empresas que não usam tecnologias modernas.
+          <strong>Dica de veterano:</strong> não foca só no dinheiro. Projetos de{" "}
+          <strong>Iniciação Científica</strong> e <strong>Empresa Júnior</strong> pesam
+          muito mais no currículo para vagas em empresas boas do que estágios em
+          empresas que não usam tecnologias modernas.
         </div>
 
         <div className={styles.divider} />
@@ -79,27 +85,39 @@ export default function CarreiraPage() {
         <div className={styles.section}>
           <p className={styles.sectionTitle}>Canais de Apoio e Vagas</p>
           <div className={carreiraStyles.linkGrid}>
-            <a 
-              href="https://portal1.iff.edu.br/nossos-campi/campos-centro/estagios" 
-              target="_blank" 
+            <a
+              href="https://portal1.iff.edu.br/nossos-campi/campos-centro/estagios"
+              target="_blank"
+              rel="noopener noreferrer"
               className={carreiraStyles.portalLink}
             >
               <strong>Setor de Estágios (CENAPE)</strong>
               <span>Orientações sobre contratos e convênios.</span>
             </a>
-    
-            <a 
-              href="https://suap.iff.edu.br/" 
-              target="_blank" 
+
+            <a
+              href="https://suap.iff.edu.br/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={carreiraStyles.portalLink}
             >
               <strong>Mural de Vagas (SUAP)</strong>
               <span>Onde aparecem os editais de monitoria e bolsas.</span>
             </a>
 
+            <a
+              href="https://selecoes.iff.edu.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={carreiraStyles.portalLink}
+            >
+              <strong>Portal de Seleções</strong>
+              <span>Todos os editais de bolsas DAAT e prazos oficiais.</span>
+            </a>
+
             <div className={carreiraStyles.portalLink}>
               <strong>Coordenação do Curso</strong>
-              <span>Para tirar dúvidas sobre se uma vaga vale como ACC.</span>
+              <span>Para tirar dúvidas sobre validação de ACCs e estágio.</span>
             </div>
           </div>
         </div>
