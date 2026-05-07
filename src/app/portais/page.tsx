@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
-import linkStyles from "./links.module.css";
+import linkStyles from "./portais.module.css";
 import Nav from "@/components/Nav";
 
 const portais = [
@@ -99,7 +99,7 @@ export default function LinksPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <h1 className={styles.title}>Links Importantes</h1>
+        <h1 className={styles.title}>Portais e Links</h1>
         <p className={styles.subtitle}>
           Todos os portais do IFF em um lugar só. Salva essa página nos
           favoritos — você vai precisar deles toda semana.

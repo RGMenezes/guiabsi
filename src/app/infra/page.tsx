@@ -8,19 +8,21 @@ const equipes = [
     tag: "Empresa Júnior",
     name: "Áurea",
     color: "#fbbf24",
-    desc: "A empresa júnior de TI do IFF. Focada em desenvolvimento de software real, gestão de projetos e consultoria. Excelente para quem quer vivência de mercado e networking.",
+    desc: "Localizada no IFF Centro, a Áurea é uma Empresa Júnior multidisciplinar que une Engenharia (Computação, Elétrica, Mecânica e Automação), Arquitetura, Sistemas de Informação e Design. Aqui, você lidera projetos reais, atende clientes de verdade e antecipa sua entrada no mercado com soft skills e experiência técnica de alto nível.",
+    insta: "https://www.instagram.com/aureaej/",
+    site: "https://www.aureaej.com/",
   },
   {
     tag: "Robótica",
     name: "Goytaborgs",
     color: "#00e5a0",
-    desc: "Equipe de alto rendimento que integra hardware e software. Desenvolvem robôs para competições nacionais, aplicando conceitos de sistemas embarcados e IA.",
+    desc: "Equipe de robótica de alto rendimento do IFF. Em breve traremos mais detalhes sobre como participar e os projetos atuais.",
   },
   {
     tag: "Eficiência Energética",
     name: "Sete Capitães",
     color: "#38bdf8",
-    desc: "Equipe de barco solar onde o BSI atua na telemetria, sistemas de controle e análise de dados em tempo real durante as competições.",
+    desc: "Equipe multidisciplinar focada em eficiência energética e sistemas de telemetria. Aguarde mais informações.",
   },
 ];
 
@@ -31,7 +33,7 @@ const laboratorios = [
   },
   {
     name: "Laboratório de Hardware e Redes",
-    desc: "Espaço dedicado à montagem de computadores, configuração de roteadores/switches e práticas de infraestrutura física.",
+    desc: "Espaço dedicado à montagem de computadores, configuração de roteadores/switches e práticas físicas.",
   },
   {
     name: "Sala de Estudos BSI",
@@ -39,7 +41,7 @@ const laboratorios = [
   },
   {
     name: "Biblioteca Central",
-    desc: "Possui acervo físico atualizado de computação e cabines de estudo individual. Link direto no portal para os periódicos CAPES.",
+    desc: "Acervo físico atualizado e acesso aos periódicos CAPES via rede CAFe.",
   },
 ];
 
@@ -55,7 +57,6 @@ export default function InfraPage() {
           Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
         </p>
 
-        {/* Seção de Laboratórios (Destaque maior agora) */}
         <div className={styles.section}>
           <p className={styles.sectionTitle}>Recursos e Espaços</p>
           <div className={infraStyles.infraGrid}>
@@ -70,7 +71,6 @@ export default function InfraPage() {
 
         <div className={styles.divider} />
 
-        {/* Seção de Equipes */}
         <div className={styles.section}>
           <p className={styles.sectionTitle}>Equipes de Competição e Prática</p>
           <div className={infraStyles.equipeList}>
@@ -81,11 +81,22 @@ export default function InfraPage() {
                 style={{ borderLeft: `4px solid ${e.color}` }}
               >
                 <div className={infraStyles.cardHeader}>
-                  <p className={styles.cardTitle}>{e.name}</p>
-                  <span className={infraStyles.tag} style={{ backgroundColor: `${e.color}22`, color: e.color }}>
-                    {e.tag}
-                  </span>
+                  <div>
+                    <span className={infraStyles.tag} style={{ backgroundColor: `${e.color}22`, color: e.color }}>
+                      {e.tag}
+                    </span>
+                    <p className={styles.cardTitle} style={{ marginTop: "8px" }}>{e.name}</p>
+                  </div>
+                  
+                  {/* Links Sociais (Aparecem apenas se existirem) */}
+                  {(e.insta || e.site) && (
+                    <div className={infraStyles.socials}>
+                      {e.insta && <a href={e.insta} style={{ color: e.color, borderColor: e.color }} target="_blank" title="Instagram">Insta</a>}
+                      {e.site && <a href={e.site} style={{ color: e.color, borderColor: e.color}} target="_blank" title="Website">Site</a>}
+                    </div>
+                  )}
                 </div>
+                
                 <p className={styles.cardBody}>{e.desc}</p>
               </div>
             ))}
@@ -93,7 +104,7 @@ export default function InfraPage() {
         </div>
 
         <div className={styles.tip}>
-          <strong>Acesso aos Labs:</strong> Como aluno de BSI, você tem prioridade de uso nos laboratórios de informática para trabalhos acadêmicos, desde que não haja aula ocorrendo no momento.
+          <strong>Dica de veterano:</strong> Participar de uma empresa júnior como a Áurea é a forma mais rápida de entender como o mercado de TI funciona na prática.
         </div>
       </main>
     </>

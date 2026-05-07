@@ -4,16 +4,16 @@ import Nav from "@/components/Nav";
 
 const navCards = [
   {
-    href: "/links",
+    href: "/portais",
     tag: "Acesso Diário",
-    title: "Portais e Sistemas",
+    title: "Portais e Links",
     desc: "SUAP, Moodle, Grade, Registro Acadêmico e o Portal de Periódicos da CAPES.",
-    color: "#4ade80",
+    color: "#4ad9de",
   },
   {
-    href: "/whatsapp",
-    tag: "Comunidade",
-    title: "Grupos de WhatsApp",
+    href: "/grupos",
+    tag: "Informações",
+    title: "Grupos e Comunidades",
     desc: "Comunicação direta: grupos por período, monitoria e outros.",
     color: "#25d366",
   },
@@ -25,8 +25,8 @@ const navCards = [
     color: "#00e5a0",
   },
   {
-    href: "/grade",
-    tag: "Matriz 2025",
+    href: "/matriz",
+    tag: "PCC 2025",
     title: "Matriz Curricular",
     desc: "Os 8 períodos e as 4 trilhas: Algoritmos, Infra, Software e Gestão.",
     color: "#38bdf8",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
-import gradeStyles from "./grade.module.css";
+import gradeStyles from "./matriz.module.css";
 import Nav from "@/components/Nav";
 
 const trilhas = {

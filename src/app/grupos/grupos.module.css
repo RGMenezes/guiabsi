@@ -41,3 +41,9 @@
   color: #4ade80;
   transform: translateX(3px);
 }
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
