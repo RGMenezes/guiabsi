@@ -26,6 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${spaceMono.variable} ${dmSans.variable}`}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#00e5a0" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Guia BSI" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+      </head>
       <body>{children}</body>
     </html>
   );

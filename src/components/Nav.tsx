@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Nav.module.css";
+import InstallButton from "./InstallButton";
 
 export default function Nav() {
   return (
@@ -7,6 +8,7 @@ export default function Nav() {
       <Link href="/" className={styles.logo}>
         BSI<span className={styles.accent}>.</span>IFF
       </Link>
+      <InstallButton />
     </nav>
   );
 }
