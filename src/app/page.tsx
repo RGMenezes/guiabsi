@@ -26,7 +26,7 @@ const navCards = [
   },
   {
     href: "/matriz",
-    tag: "PCC 2025",
+    tag: "PPC 2025",
     title: "Matriz Curricular",
     desc: "Os 8 períodos e as 4 trilhas: Algoritmos, Infra, Software e Gestão.",
     color: "#38bdf8",
