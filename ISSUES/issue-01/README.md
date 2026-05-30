@@ -1,105 +1,67 @@
-# [TASK-04-FRONT] — Implementar Estados Padronizados da Aplicação
-
-**Issue pai:** ISSUE-01 — Refatoração Estrutural do GuiaBSI
-**Depende de:** TASK-02-FRONT
-
----
+# [ISSUE-01] — Refatoração Estrutural do GuiaBSI
 
 ## Objetivo
 
-Padronizar o tratamento dos estados de carregamento, erro, ausência de conteúdo e sucesso em toda a aplicação.
+Preparar a base técnica do GuiaBSI para suportar novas funcionalidades, crescimento do projeto e manutenção de longo prazo.
 
-Após a conclusão desta task, todas as páginas e componentes poderão utilizar uma experiência consistente para comunicação de estados ao usuário.
+A refatoração deve melhorar a organização do código, promover reutilização de componentes, padronizar a experiência do usuário e garantir que futuras funcionalidades possam ser implementadas de forma consistente.
 
 ---
 
 ## Contexto
 
-As futuras funcionalidades do GuiaBSI exibirão listas, recursos acadêmicos, vídeos, projetos e outros conteúdos dinâmicos.
+O GuiaBSI começou como um projeto de menor escopo e atualmente atende bem às funcionalidades existentes.
 
-Para evitar implementações diferentes em cada página, é necessário criar componentes reutilizáveis para representar os estados mais comuns da aplicação.
+Com a expansão planejada da plataforma, incluindo recursos acadêmicos, biblioteca de vídeos, empresas parceiras, projetos da comunidade e novas áreas de conteúdo, torna-se necessário fortalecer sua arquitetura.
 
----
-
-## Tasks
-
-### Componentes e Páginas
-
-* [ ] Criar componente `LoadingState`
-* [ ] Criar componente `ErrorState`
-* [ ] Criar componente `EmptyState`
-* [ ] Criar componente `SuccessState` (quando aplicável)
-
-### Integração
-
-* [ ] Aplicar padrão nas páginas existentes
-* [ ] Definir padrão visual para mensagens
-* [ ] Definir padrão visual para ícones
-* [ ] Definir padrão visual para ações de recuperação
-
-### Documentação
-
-* [ ] Documentar uso dos componentes
-* [ ] Definir exemplos de implementação
+Esta issue concentra as tarefas responsáveis por estruturar a aplicação antes da implementação das novas funcionalidades.
 
 ---
 
-## Estados a implementar
+## Escopo
 
-### Estado padrão
+### Arquitetura
 
-* [ ] Conteúdo carregado normalmente
+* Reorganização da estrutura de pastas
+* Separação de responsabilidades
+* Centralização de tipos, utilitários e dados
 
-### Estado de loading
+### Componentização
 
-* [ ] Skeleton quando aplicável
-* [ ] Spinner quando aplicável
-* [ ] Botões desabilitados durante carregamento
+* Criação de componentes compartilhados
+* Remoção de duplicações
+* Padronização visual
 
-### Estado de erro
+### Responsividade
 
-* [ ] Mensagem amigável ao usuário
-* [ ] Opção de tentar novamente quando aplicável
+* Revisão completa da experiência mobile
+* Ajustes para tablets e desktops
+* Correção de inconsistências visuais
 
-### Estado vazio
+### Estados da Aplicação
 
-* [ ] Mensagem explicativa
-* [ ] Orientação sobre próximos passos
-
----
-
-## Validações client-side
-
-* [ ] Não exibir erros técnicos ao usuário
-* [ ] Não exibir stack traces
-* [ ] Mensagens devem ser compreensíveis
+* Loading
+* Erro
+* Vazio
+* Sucesso
 
 ---
 
-## Acessibilidade e UX
+## Tasks Relacionadas
 
-* [ ] Feedback visual imediato após ação do usuário
-* [ ] Estados visualmente consistentes
-* [ ] Mensagens legíveis em dispositivos móveis
-* [ ] Componentes responsivos em viewport mínimo de 375px
-
----
-
-## Sugestões de Testes
-
-* [ ] Loading é exibido durante carregamento
-* [ ] Estado vazio é exibido corretamente
-* [ ] Estado de erro exibe mensagem amigável
-* [ ] Botões permanecem bloqueados durante requisições
-* [ ] Estados não quebram o layout
-* [ ] Componentes funcionam em 375px
+* [ ] TASK-01-FRONT — Reestruturar Arquitetura do Projeto
+* [ ] TASK-02-FRONT — Padronizar Componentes Compartilhados
+* [ ] TASK-03-FRONT — Revisar Responsividade Global
+* [ ] TASK-04-FRONT — Implementar Estados Padronizados da Aplicação
 
 ---
 
-## Critérios de Aceite
+## Critérios de Conclusão da Issue
 
-* [ ] Todos os estados estão implementados
-* [ ] Componentes reutilizáveis disponíveis
-* [ ] Padrão visual consistente em toda aplicação
-* [ ] Nenhuma mensagem técnica é exibida ao usuário
-* [ ] Responsivo em mobile (375px)
+* [ ] Estrutura do projeto reorganizada
+* [ ] Componentes compartilhados implementados
+* [ ] Responsividade revisada
+* [ ] Estados padronizados implementados
+* [ ] Build sem erros
+* [ ] Sem regressões funcionais
+* [ ] Projeto preparado para receber as próximas funcionalidades
