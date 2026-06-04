@@ -1,11 +1,12 @@
+import TopBar from "@/components/TopBar";
 import Link from "next/link";
 import styles from "../inner.module.css";
 import groupStyles from "./grupos.module.css";
-import TopBar from "@/components/TopBar";
 /* import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
 import { MdSearchOff } from "react-icons/md"; */
-import {turmas, centroAcademico, outros} from "@/constants/app/grupos";
+import Aside from "@/components/Aside";
 import Category from "@/components/category/Category";
+import { centroAcademico, outros, turmas } from "@/constants/app/grupos";
 
 /* TODO: preencha os links reais dos grupos abaixo
 const grupos = [
@@ -50,7 +51,7 @@ export default function WhatsAppPage() {
           momento agora.
         </p>
 
-        <Category titleText="Turmas" classContent={classCategory}>
+        <Category titleText="Turmas">
           {turmas.map(({nome, link, icon}) => (
             <a
               key={nome}
@@ -68,7 +69,7 @@ export default function WhatsAppPage() {
           ))}
         </Category>
 
-        <Category titleText="Centro Acadêmico" classContent={classCategory}>
+        <Category titleText="Centro Acadêmico">
           {centroAcademico.map(({nome, link, icon}) => (
             <a
               key={nome}
@@ -86,7 +87,7 @@ export default function WhatsAppPage() {
           ))}
         </Category>
 
-        <Category titleText="Outros" classContent={classCategory} divider={false}>
+        <Category titleText="Outros" divider={false}>
           {outros.map(({nome, link, icon}) => (
             <a
               key={nome}
@@ -127,10 +128,10 @@ export default function WhatsAppPage() {
           </div>
         ))*/}
 
-        <aside>
+        <Aside>
           <strong>Atenção:</strong> links de grupo podem expirar. Se algum não
           funcionar, fale com o CA para atualizar.
-        </aside>
+        </Aside>
       </main>
     </>
   );

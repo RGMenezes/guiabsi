@@ -1,8 +1,9 @@
+import TopBar from "@/components/TopBar";
+import { matrizOficial, trilhas } from "@/constants/app/matriz";
 import Link from "next/link";
 import styles from "../inner.module.css";
 import gradeStyles from "./matriz.module.css";
-import TopBar from "@/components/TopBar";
-import {trilhas,matrizOficial} from "@/constants/app/matriz";
+import Aside from "@/components/Aside";
 
 /* const trilhas = {
   algoritmos: { nome: "Algoritmos e Estruturas de Dados", color: "#4ade80" },
@@ -144,11 +145,11 @@ export default function GradePage() {
           ))}
         </div>
 
-        <aside style={{ marginTop: "32px" }}>
+        <Aside>
           <strong>Eletivas:</strong> os temas das 2 eletivas do 8º período são definidos
           pelo NDE a cada semestre. Não é você que escolhe — o NDE define o que será
           ofertado naquele semestre.
-        </aside>
+        </Aside>
       </main>
     </>
   );

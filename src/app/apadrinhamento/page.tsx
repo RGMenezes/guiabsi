@@ -25,14 +25,14 @@ export default function ApadrinhamentoPage() {
       <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
-        
+
         <h1 className={styles.title}>Apadrinhamento</h1>
         <p className={styles.subtitle}>
           Uma rede de mentoria direta. Cada calouro conectado a um veterano que
           já percorreu o caminho que você está começando agora.
         </p>
 
-        <Category titleText="Como Funciona?" classContent={styles.body}>
+        <Category titleText="Como Funciona?">
           <p>
             Não é uma aula extra. É um contato direto — via WhatsApp ou
             presencial — com alguém de referência para as dúvidas que você

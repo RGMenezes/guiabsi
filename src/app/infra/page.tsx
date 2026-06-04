@@ -1,9 +1,10 @@
+import Category from "@/components/category/Category";
+import TopBar from "@/components/TopBar";
+import { equipes, laboratorios } from "@/constants/app/infra";
 import Link from "next/link";
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
-import TopBar from "@/components/TopBar";
-import {equipes, laboratorios} from "@/constants/app/infra";
-import Category from "@/components/category/Category";
+import Aside from "@/components/Aside";
 
 /* const equipes = [
   {
@@ -86,7 +87,7 @@ export default function InfraPage() {
           Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
         </p>
 
-        <Category titleText="Recursos e Espaços"> {/*classContent={infraStyles.infraGrid} FALHA NA IMPLEMENTAÇÃO*/}
+        <Category titleText="Recursos e Espaços"> {/*={infraStyles.infraGrid} FALHA NA IMPLEMENTAÇÃO*/}
           <div className={infraStyles.infraGrid}>
             {laboratorios.map((local) => (
               <div key={local.name} className={infraStyles.infraCard}>
@@ -126,7 +127,7 @@ export default function InfraPage() {
                     </span>
                     <p className={styles.cardTitle} style={{ marginTop: "8px" }}>{e.name}</p>
                   </div>
-                  
+
                   {/* Links Sociais (Aparecem apenas se existirem) */}
                   {(e.insta || e.site) && (
                     <div className={infraStyles.socials}>
@@ -137,7 +138,7 @@ export default function InfraPage() {
                     </div>
                   )}
                 </div>
-                
+
                 <p className={styles.cardBody}>{e.desc}</p>
               </div>
             ))}
@@ -160,7 +161,7 @@ export default function InfraPage() {
                     </span>
                     <p className={styles.cardTitle} style={{ marginTop: "8px" }}>{e.name}</p>
                   </div>
-                  
+
                   {/* Links Sociais (Aparecem apenas se existirem) *}
                   {(e.insta || e.site) && (
                     <div className={infraStyles.socials}>
@@ -171,16 +172,16 @@ export default function InfraPage() {
                     </div>
                   )}
                 </div>
-                
+
                 <p className={styles.cardBody}>{e.desc}</p>
               </div>
             ))}
           </div>
         </div>*/}
 
-        <aside>
+        <Aside>
           <strong>Dica de veterano:</strong> Participar de uma empresa júnior como a Áurea é a forma mais rápida de entender como o mercado de TI funciona na prática.
-        </aside>
+        </Aside>
       </main>
     </>
   );

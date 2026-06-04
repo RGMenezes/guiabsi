@@ -1,7 +1,8 @@
-import Link from "next/link";
-import styles from "../inner.module.css";
 import TopBar from "@/components/TopBar";
 import Category from "@/components/category/Category";
+import Link from "next/link";
+import styles from "../inner.module.css";
+import Aside from "@/components/Aside";
 
 export default function DrivePage() {
   return (
@@ -16,7 +17,7 @@ export default function DrivePage() {
           importante na semana de provas.
         </p>
 
-        <Category titleText="O que é?" classContent={styles.body}>
+        <Category titleText="O que é?">
           <div className={styles.body}>
             <p>
               Um Google Drive compartilhado com provas de períodos anteriores,{" "}
@@ -50,20 +51,20 @@ export default function DrivePage() {
         <div className={styles.divider} />*/}
 
         <Category titleText="A Regra De Ouro">
-          <aside>
+          <Aside>
             <strong>Usou? Contribuiu.</strong> Esse Drive só existe porque alguém
             decidiu ajudar quem viria depois. Terminou uma prova? Tire uma foto,
             apague seu nome e manda para o Centro Acadêmico. Simples assim.
-          </aside>
+          </Aside>
         </Category>
 
         {/*<div className={styles.section}>
           <p className={styles.sectionTitle}>A Regra de Ouro</p>
-          <aside>
+          <Aside>
             <strong>Usou? Contribuiu.</strong> Esse Drive só existe porque alguém
             decidiu ajudar quem viria depois. Terminou uma prova? Tire uma foto,
             apague seu nome e manda para o Centro Acadêmico. Simples assim.
-          </aside>
+          </Aside>
         </div>
 
         <div className={styles.divider} />*/}

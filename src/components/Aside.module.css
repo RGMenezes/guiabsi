@@ -1,0 +1,20 @@
+.aside {
+  background: rgba(255, 107, 53, 0.08);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.aside strong, .aside a {
+  color: #ff6b35;
+}
+
+.aside a {
+  text-decoration: underline;
+  font-style: italic;
+  transition: all .3s ease;
+}
