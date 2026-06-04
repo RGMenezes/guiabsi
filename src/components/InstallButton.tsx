@@ -7,7 +7,7 @@ import { MdSmartphone } from "react-icons/md";
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
-}
+} // OK
 
 // Captura o evento fora do componente — persiste entre renders e navegações
 let cachedPrompt: BeforeInstallPromptEvent | null = null;

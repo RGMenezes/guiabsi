@@ -1,9 +1,11 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
-import Nav from "@/components/Nav";
+import TopBar from "@/components/TopBar";
+import {equipes, laboratorios} from "@/constants/app/infra";
+import Category from "@/components/category/Category";
 
-const equipes = [
+/* const equipes = [
   {
     tag: "Empresa Júnior",
     name: "Áurea",
@@ -51,7 +53,7 @@ const equipes = [
     desc: "A DAAT (Desenvolvimento Acadêmico e Apoio Tecnológico) é um programa de bolsas do IFF Campus Campos Centro voltado para inserir estudantes de cursos técnicos e de graduação em projetos acadêmicos, tecnológicos e laboratoriais. O objetivo principal é aproximar os alunos da prática profissional em áreas como tecnologia, engenharia, comunicação, acessibilidade, pesquisa aplicada, produção multimídia e suporte acadêmico.",
     site: "https://portal1.iff.edu.br/nossos-campi/campos-centro/noticias/inscricoes-abertas-para-bolsa-daat-no-iff-campos-centro"
   }
-];
+]; // OK
 
 const laboratorios = [
   {
@@ -70,12 +72,12 @@ const laboratorios = [
     name: "Biblioteca Central",
     desc: "Acervo físico atualizado e acesso aos periódicos CAPES via rede CAFe.",
   },
-];
+]; // OK */
 
 export default function InfraPage() {
   return (
     <>
-      <Nav />
+      <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
@@ -84,7 +86,18 @@ export default function InfraPage() {
           Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
         </p>
 
-        <div className={styles.section}>
+        <Category titleText="Recursos e Espaços"> {/*classContent={infraStyles.infraGrid} FALHA NA IMPLEMENTAÇÃO*/}
+          <div className={infraStyles.infraGrid}>
+            {laboratorios.map((local) => (
+              <div key={local.name} className={infraStyles.infraCard}>
+                <strong>{local.name}</strong>
+                <p>{local.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Category>
+
+        {/*<div className={styles.section}>
           <p className={styles.sectionTitle}>Recursos e Espaços</p>
           <div className={infraStyles.infraGrid}>
             {laboratorios.map((local) => (
@@ -96,10 +109,9 @@ export default function InfraPage() {
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div className={styles.divider} />*/}
 
-        <div className={styles.section}>
-          <p className={styles.sectionTitle}>Equipes de Competição e Prática</p>
+        <Category titleText="Equipes De Competição E Prática" divider={false}>
           <div className={infraStyles.equipeList}>
             {equipes.map((e) => (
               <div
@@ -130,11 +142,45 @@ export default function InfraPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Category>
 
-        <div className={styles.tip}>
+        {/* {<div className={styles.section}>
+          <p className={styles.sectionTitle}>Equipes de Competição e Prática</p>
+          <div className={infraStyles.equipeList}>
+            {equipes.map((e) => (
+              <div
+                key={e.name}
+                className={styles.card}
+                style={{ borderLeft: `4px solid ${e.color}` }}
+              >
+                <div className={infraStyles.cardHeader}>
+                  <div>
+                    <span className={infraStyles.tag} style={{ backgroundColor: `${e.color}22`, color: e.color }}>
+                      {e.tag}
+                    </span>
+                    <p className={styles.cardTitle} style={{ marginTop: "8px" }}>{e.name}</p>
+                  </div>
+                  
+                  {/* Links Sociais (Aparecem apenas se existirem) *}
+                  {(e.insta || e.site) && (
+                    <div className={infraStyles.socials}>
+                      {e.email && <a href={e.email} style={{ color: e.color, borderColor: e.color }} target="_blank" title="E-mail">E-mail</a>}
+                      {e.siteInter && <a href={e.siteInter} style={{ color: e.color, borderColor: e.color}} target="_blank" title="WebsiteInternacional">Site Inter</a>}
+                      {e.insta && <a href={e.insta} style={{ color: e.color, borderColor: e.color }} target="_blank" title="Instagram">Insta</a>}
+                      {e.site && <a href={e.site} style={{ color: e.color, borderColor: e.color}} target="_blank" title="Website">Site</a>}
+                    </div>
+                  )}
+                </div>
+                
+                <p className={styles.cardBody}>{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>*/}
+
+        <aside>
           <strong>Dica de veterano:</strong> Participar de uma empresa júnior como a Áurea é a forma mais rápida de entender como o mercado de TI funciona na prática.
-        </div>
+        </aside>
       </main>
     </>
   );

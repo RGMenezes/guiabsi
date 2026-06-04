@@ -1,0 +1,27 @@
+
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.containerFlow {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: space-evenly;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font: 500 0.85rem var(--font-mono);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
