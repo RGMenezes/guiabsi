@@ -46,3 +46,30 @@ h1, h2, h3 {
   font-family: var(--font-mono);
   line-height: 1.2;
 }
+
+hr {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  margin: 40px 0;
+}
+
+aside {
+  background: rgba(255, 107, 53, 0.08);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+aside strong, aside a {
+  color: #ff6b35;
+}
+
+aside a {
+  text-decoration: underline;
+  font-style: italic;
+  transition: all .3s ease;
+}

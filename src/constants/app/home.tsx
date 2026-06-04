@@ -1,9 +1,5 @@
-import Link from "next/link";
-import styles from "./page.module.css";
-import TopBar from "@/components/TopBar";
-import {navCards} from "@/constants/app/home";
 
-/* const navCards = [
+export const navCards = [
   {
     href: "/portais",
     tag: "Acesso Diário",
@@ -67,42 +63,4 @@ import {navCards} from "@/constants/app/home";
     desc: "Regras de TCC, Eletivas, trancamento e prazos acadêmicos.",
     color: "#94a3b8",
   },
-]; // OK */
-
-export default function Home() {
-  return (
-    <>
-      <TopBar />
-      <main className={styles.main}>
-        <header className={styles.hero}>
-          <p className={styles.heroTag}>Centro Acadêmico BSI — IFF Campos</p>
-          <h1 className={styles.heroTitle}>
-            Guia do<br />
-            <span className={styles.heroAccent}>Estudante BSI</span>
-          </h1>
-          <p className={styles.heroDesc}>
-            Central de informações atualizada conforme o{" "}
-            <strong>PPC 2025 (Resolução CONSUP 304/2025)</strong>.
-            Tudo o que você precisa em um só lugar.
-          </p>
-        </header>
-
-        <nav className={styles.grid}>
-          {navCards.map((card) => (
-            <Link
-              key={card.href}
-              href={card.href}
-              className={styles.card}
-              style={{ "--card-accent": card.color } as React.CSSProperties}
-            >
-              <span className={styles.cardTag}>{card.tag}</span>
-              <h2 className={styles.cardTitle}>{card.title}</h2>
-              <p className={styles.cardDesc}>{card.desc}</p>
-              <span className={styles.cardArrow}>→</span>
-            </Link>
-          ))}
-        </nav>
-      </main>
-    </>
-  );
-}
+];

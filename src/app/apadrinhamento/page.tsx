@@ -1,8 +1,10 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
-import Nav from "@/components/Nav";
+import TopBar from "@/components/TopBar";
+import {beneficios} from "@/constants/app/apadrinhamento";
+import Category from "@/components/category/Category";
 
-const beneficios = [
+/*const beneficios = [
   {
     title: "Caminho das Pedras",
     desc: "Quais livros realmente usar e como cada professor gosta que as provas sejam feitas.",
@@ -15,12 +17,12 @@ const beneficios = [
     title: "Networking",
     desc: "Te apresenta ao restante da faculdade e ajuda a entrar no ritmo da cultura de BSI.",
   },
-];
+]; // OK */
 
 export default function ApadrinhamentoPage() {
   return (
     <>
-      <Nav />
+      <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
         
@@ -30,7 +32,20 @@ export default function ApadrinhamentoPage() {
           já percorreu o caminho que você está começando agora.
         </p>
 
-        <div className={styles.section}>
+        <Category titleText="Como Funciona?" classContent={styles.body}>
+          <p>
+            Não é uma aula extra. É um contato direto — via WhatsApp ou
+            presencial — com alguém de referência para as dúvidas que você
+            tem vergonha de perguntar ao professor.
+          </p>
+          <p>
+            Fazemos o <strong>match</strong> entre calouro e veterano com base
+            no perfil de cada um. Preencha o formulário e a gente cuida do
+            resto.
+          </p>
+        </Category>
+
+        {/*<div className={styles.section}>
           <p className={styles.sectionTitle}>Como funciona</p>
           <div className={styles.body}>
             <p>
@@ -46,9 +61,20 @@ export default function ApadrinhamentoPage() {
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div className={styles.divider} />*/}
 
-        <div className={styles.section}>
+        <Category titleText="O que o padrinho faz por você?">
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {beneficios.map((b) => (
+              <div key={b.title} className={styles.card}>
+                <p className={styles.cardTitle}>{b.title}</p>
+                <p className={styles.cardBody}>{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Category>
+
+        {/*<div className={styles.section}>
           <p className={styles.sectionTitle}>O que o padrinho faz por você</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {beneficios.map((b) => (
@@ -60,7 +86,7 @@ export default function ApadrinhamentoPage() {
           </div>
         </div>
 
-        <div className={styles.divider} />
+        <div className={styles.divider} />*/}
 
         <a
           href="https://forms.gle/mKffnbdotMWouqCQ6"

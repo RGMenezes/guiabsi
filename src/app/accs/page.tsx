@@ -1,13 +1,17 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import accStyles from "./accs.module.css";
-import Nav from "@/components/Nav";
+import TopBar from "@/components/TopBar";
+import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/app/accs";
+import Category from "@/components/category/Category";
+import ListItem from "@/components/listitem/ListItem";
+import {createLiArray} from "@/utils/createLiArray";
 
-const linkRegistro = {
+/* const linkRegistro = {
   nome: "Horas Complementares",
   url: "https://inf.centro.iff.edu.br/",
   desc: "Site para registro de horas complementares.",
-};
+}; // OK
 
 const tabelaSemLimite = [
   "Curso de idioma realizado durante o curso",
@@ -19,7 +23,7 @@ const tabelaSemLimite = [
   "Participação em eventos como ouvinte",
   "Participação em congressos, jornadas, fóruns, debates, visitas técnicas, workshop e minicursos",
   "Serviço voluntário de caráter sócio comunitário (Lei 9.608/1998)",
-];
+]; // OK
 
 const tabelaComConversao = [
   { atividade: "Apresentação de artigo em eventos científicos", paridade: "5h por publicação" },
@@ -28,12 +32,14 @@ const tabelaComConversao = [
   { atividade: "Autor ou coautor de capítulo de livro", paridade: "5h por publicação" },
   { atividade: "Participação como ouvinte em banca de conclusão de curso (graduação, pós, mestrado ou doutorado)", paridade: "1h por banca" },
   { atividade: "Certificação na área do curso", paridade: "3h por certificação" },
-];
+]; // OK */
+
+const classCategory = styles.body;
 
 export default function ACCPage() {
   return (
     <>
-      <Nav />
+      <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
@@ -44,18 +50,35 @@ export default function ACCPage() {
           O aproveitamento é feito via requerimento à coordenação com os certificados comprobatórios.
         </p>
 
-        <div className={accStyles.infoCard}>
-          <p>
-            📋 <strong>Como validar:</strong> registre suas horas no{" "}
-            <a href={linkRegistro.url} target="_blank" rel="noopener noreferrer">
-              {linkRegistro.nome}
-            </a>{" "}
-            e submeta os comprovantes à coordenação para análise. Casos não previstos
-            nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
-          </p>
-        </div>
+        <aside style={{marginBottom: "32px"}}>
+          📋 <strong>Como validar:</strong> registre suas horas no{" "}
+          <a href={linkRegistro.url} target="_blank" rel="noopener noreferrer">
+            {linkRegistro.nome}
+          </a>{" "}
+          e submeta os comprovantes à coordenação para análise. Casos não previstos
+          nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
+        </aside>
 
-        <div className={styles.section}>
+        <Category titleText="Tabela 6 — Sem limite de aproveitamento">
+          <p className={styles.body} style={{ marginBottom: "8px" }}>
+            Atividades abaixo são aproveitadas integralmente (as horas do certificado valem direto),
+            sem teto máximo de horas por categoria.
+          </p>
+          <ul className={accStyles.listaSemLimite}>
+            {createLiArray(tabelaSemLimite)}
+            
+            {/* {tabelaSemLimite.map((item) => (
+              <li key={item} className={accStyles.itemSemLimite}>
+                <div>
+                  <span style={{color: "var(--accent)"}}>→ </span>
+                  {item}
+                </div>
+              </li>
+            ))} */}
+          </ul>
+        </Category>
+
+        {/* {<div className={styles.section}>
           <p className={styles.sectionTitle}>Tabela 6 — Sem limite de aproveitamento</p>
           <div className={styles.body} style={{ marginBottom: "8px" }}>
             <p>
@@ -70,11 +93,33 @@ export default function ACCPage() {
               </li>
             ))}
           </ul>
-        </div>
+        </div>} */}
 
-        <div className={styles.divider} />
+        {/*<div className={styles.divider} />*/}
 
-        <div className={styles.section}>
+        <Category titleText="Tabela 7 — Com conversão de horas">
+          <p className={styles.body} style={{ marginBottom: "16px" }}>
+            Atividades com paridade definida: o número de horas de ACC é fixo
+            independente do tempo dedicado.
+          </p>
+          <ul className={accStyles.listaConversao}>
+            {createLiArray(tabelaComConversao)}
+
+            {/* {tabelaComConversao.map((item) => (
+              <li key={item.atividade} className={accStyles.rowConversao}>
+                <div>
+                  <span className={accStyles.atividadeNome}>{item.atividade}</span>
+                </div>
+
+                <div style={{textAlign: "center"}}>
+                  <span className={accStyles.paridade}>{item.paridade}</span>
+                </div>
+              </li>
+            ))} */}
+          </ul>
+        </Category>
+
+        {/* {<div className={styles.section}>
           <p className={styles.sectionTitle}>Tabela 7 — Com conversão de horas</p>
           <div className={styles.body} style={{ marginBottom: "16px" }}>
             <p>
@@ -90,12 +135,12 @@ export default function ACCPage() {
               </div>
             ))}
           </div>
-        </div>
+        </div>} */}
 
-        <div className={styles.tip}>
+        <aside>
           <strong>Começa desde o 1º período.</strong> Participar de eventos, congressos e
           minicursos como ouvinte já conta (Tabela 6). Não deixa acumular para o último ano.
-        </div>
+        </aside>
       </main>
     </>
   );

@@ -1,9 +1,11 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import linkStyles from "./portais.module.css";
-import Nav from "@/components/Nav";
+import TopBar from "@/components/TopBar";
+import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/app/portais";
+import Category from "@/components/category/Category";
 
-const portais = [
+/* const portais = [
   {
     categoria: "Vida Acadêmica",
     items: [
@@ -90,12 +92,14 @@ const portais = [
       },
     ],
   },
-];
+]; // OK */
+
+const classCategory = linkStyles.grid;
 
 export default function LinksPage() {
   return (
     <>
-      <Nav />
+      <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
@@ -105,11 +109,103 @@ export default function LinksPage() {
           favoritos — você vai precisar deles toda semana.
         </p>
 
-        {portais.map((grupo) => (
+        <Category titleText="Vida Acadêmica" classContent={classCategory}>
+          {vidaAcademica.map(({nome, url, desc, tag}) => (
+            <a
+              key={nome}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkStyles.portalCard}
+            >
+              <div className={linkStyles.cardHeader}>
+                <span className={linkStyles.portalName}>{nome}</span>
+                {tag && (
+                  <span className={linkStyles.badge}>{tag}</span>
+                )}
+              </div>
+              <p className={linkStyles.portalDesc}>{desc}</p>
+              <span className={linkStyles.url}>
+                {url.replace("https://", "").replace(/\/$/, "")}
+              </span>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Salas Virtuais" classContent={classCategory}>
+          {salasVirtuais.map(({nome, url, desc, tag}) => (
+            <a
+              key={nome}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkStyles.portalCard}
+            >
+              <div className={linkStyles.cardHeader}>
+                <span className={linkStyles.portalName}>{nome}</span>
+                {tag && (
+                  <span className={linkStyles.badge}>{tag}</span>
+                )}
+              </div>
+              <p className={linkStyles.portalDesc}>{desc}</p>
+              <span className={linkStyles.url}>
+                {url.replace("https://", "").replace(/\/$/, "")}
+              </span>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Oportunidades" classContent={classCategory}>
+          {oportunidades.map(({nome, url, desc, tag}) => (
+            <a
+              key={nome}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkStyles.portalCard}
+            >
+              <div className={linkStyles.cardHeader}>
+                <span className={linkStyles.portalName}>{nome}</span>
+                {tag && (
+                  <span className={linkStyles.badge}>{tag}</span>
+                )}
+              </div>
+              <p className={linkStyles.portalDesc}>{desc}</p>
+              <span className={linkStyles.url}>
+                {url.replace("https://", "").replace(/\/$/, "")}
+              </span>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Documentos & Serviços" classContent={classCategory} divider={false}>
+          {docServicos.map(({nome, url, desc, tag}) => (
+            <a
+              key={nome}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkStyles.portalCard}
+            >
+              <div className={linkStyles.cardHeader}>
+                <span className={linkStyles.portalName}>{nome}</span>
+                {tag && (
+                  <span className={linkStyles.badge}>{tag}</span>
+                )}
+              </div>
+              <p className={linkStyles.portalDesc}>{desc}</p>
+              <span className={linkStyles.url}>
+                {url.replace("https://", "").replace(/\/$/, "")}
+              </span>
+            </a>
+          ))}
+        </Category>
+
+        {/*portais.map((grupo) => (
           <div key={grupo.categoria} className={styles.section}>
             <p className={styles.sectionTitle}>{grupo.categoria}</p>
             <div className={linkStyles.grid}>
-              {grupo.items.map((portal) => (
+              {grupo.items.map((portal) => ( // Cada portal é um link usado como container
                 <a
                   key={portal.nome}
                   href={portal.url}
@@ -131,7 +227,7 @@ export default function LinksPage() {
               ))}
             </div>
           </div>
-        ))}
+        ))*/}
       </main>
     </>
   );

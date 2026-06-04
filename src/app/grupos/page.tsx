@@ -1,11 +1,13 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import groupStyles from "./grupos.module.css";
-import Nav from "@/components/Nav";
-import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
-import { MdSearchOff } from "react-icons/md";
+import TopBar from "@/components/TopBar";
+/* import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
+import { MdSearchOff } from "react-icons/md"; */
+import {turmas, centroAcademico, outros} from "@/constants/app/grupos";
+import Category from "@/components/category/Category";
 
-// TODO: preencha os links reais dos grupos abaixo
+/* TODO: preencha os links reais dos grupos abaixo
 const grupos = [
   {
     categoria: "Turmas",
@@ -31,12 +33,14 @@ const grupos = [
       { nome: "Cardápio do Dia (3º grupo)", link: "https://chat.whatsapp.com/C8xWRbonu8mIPOylMkXZBn", icon: <FaUtensils /> },
     ],
   },
-];
+]; // OK */
+
+const classCategory = groupStyles.grid;
 
 export default function WhatsAppPage() {
   return (
     <>
-      <Nav />
+      <TopBar />
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
@@ -46,7 +50,61 @@ export default function WhatsAppPage() {
           momento agora.
         </p>
 
-        {grupos.map((categoria) => (
+        <Category titleText="Turmas" classContent={classCategory}>
+          {turmas.map(({nome, link, icon}) => (
+            <a
+              key={nome}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={groupStyles.groupCard}
+            >
+              <div className={groupStyles.iconWrapper}>
+                {icon}
+              </div>
+              <span className={groupStyles.groupName}>{nome}</span>
+              <span className={groupStyles.arrow}>→</span>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Centro Acadêmico" classContent={classCategory}>
+          {centroAcademico.map(({nome, link, icon}) => (
+            <a
+              key={nome}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={groupStyles.groupCard}
+            >
+              <div className={groupStyles.iconWrapper}>
+                {icon}
+              </div>
+              <span className={groupStyles.groupName}>{nome}</span>
+              <span className={groupStyles.arrow}>→</span>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Outros" classContent={classCategory} divider={false}>
+          {outros.map(({nome, link, icon}) => (
+            <a
+              key={nome}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={groupStyles.groupCard}
+            >
+              <div className={groupStyles.iconWrapper}>
+                {icon}
+              </div>
+              <span className={groupStyles.groupName}>{nome}</span>
+              <span className={groupStyles.arrow}>→</span>
+            </a>
+          ))}
+        </Category>
+
+        {/*grupos.map((categoria) => (
           <div key={categoria.categoria} className={styles.section}>
             <p className={styles.sectionTitle}>{categoria.categoria}</p>
             <div className={groupStyles.grid}>
@@ -67,12 +125,12 @@ export default function WhatsAppPage() {
               ))}
             </div>
           </div>
-        ))}
+        ))*/}
 
-        <div className={styles.tip}>
+        <aside>
           <strong>Atenção:</strong> links de grupo podem expirar. Se algum não
           funcionar, fale com o CA para atualizar.
-        </div>
+        </aside>
       </main>
     </>
   );

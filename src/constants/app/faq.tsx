@@ -1,10 +1,5 @@
-import Link from "next/link";
-import styles from "../inner.module.css";
-import faqStyles from "./faq.module.css";
-import TopBar from "@/components/TopBar";
-import {faqs} from "@/constants/app/faq";
 
-/* const faqs = [
+export const faqs = [
   {
     categoria: "Horas Complementares (ACC)",
     perguntas: [
@@ -73,38 +68,4 @@ import {faqs} from "@/constants/app/faq";
       },
     ],
   },
-]; // OK */
-
-export default function FAQPage() {
-  return (
-    <>
-      <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
-
-        <p className={styles.tag}>Dúvidas — PPC 2025</p>
-        <h1 className={styles.title}>Dúvidas Frequentes</h1>
-        <p className={styles.subtitle}>
-          Respostas baseadas no PPC 2025 (Resolução CONSUP 304/2025).
-          Se a dúvida não estiver aqui, fala com a coordenação.
-        </p>
-
-        <div className={faqStyles.container}>
-          {faqs.map((secao) => (
-            <div key={secao.categoria}>
-              <h2 className={faqStyles.sectionTitle}>{secao.categoria}</h2>
-              <div>
-                {secao.perguntas.map((item, idx) => (
-                  <details key={idx} className={faqStyles.item}>
-                    <summary className={faqStyles.question}>{item.q}</summary>
-                    <div className={faqStyles.answer}>{item.a}</div>
-                  </details>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </main>
-    </>
-  );
-}
+];
