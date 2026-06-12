@@ -109,7 +109,7 @@ export default function LinksPage() {
           favoritos — você vai precisar deles toda semana.
         </p>
 
-        <Category titleText="Vida Acadêmica" classContent={classCategory}>
+        <Category titleText="Vida Acadêmica">
           {vidaAcademica.map(({nome, url, desc, tag}) => (
             <a
               key={nome}
@@ -132,7 +132,7 @@ export default function LinksPage() {
           ))}
         </Category>
 
-        <Category titleText="Salas Virtuais" classContent={classCategory}>
+        <Category titleText="Salas Virtuais">
           {salasVirtuais.map(({nome, url, desc, tag}) => (
             <a
               key={nome}
@@ -155,7 +155,7 @@ export default function LinksPage() {
           ))}
         </Category>
 
-        <Category titleText="Oportunidades" classContent={classCategory}>
+        <Category titleText="Oportunidades">
           {oportunidades.map(({nome, url, desc, tag}) => (
             <a
               key={nome}
@@ -178,7 +178,7 @@ export default function LinksPage() {
           ))}
         </Category>
 
-        <Category titleText="Documentos & Serviços" classContent={classCategory} divider={false}>
+        <Category titleText="Documentos & Serviços" divider={false}>
           {docServicos.map(({nome, url, desc, tag}) => (
             <a
               key={nome}

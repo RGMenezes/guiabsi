@@ -4,6 +4,7 @@ import carreiraStyles from "./carreira.module.css";
 import TopBar from "@/components/TopBar";
 import {bolsas} from "@/constants/app/carreira";
 import Category from "@/components/category/Category";
+import Aside from "@/components/aside/Aside";
 
 /*const bolsas = [
   { name: "Monitoria", desc: "Apoio a disciplinas do núcleo básico ou específico. Ótimo para revisar conteúdo e já conta como ACC (Tabela 6, sem limite)." },
@@ -95,12 +96,12 @@ export default function CarreiraPage() {
             </Link>.
           </p>
 
-          <aside>
+          <Aside>
             <strong>Dica de veterano:</strong> não foca só no dinheiro. Projetos de{" "}
             <strong>Iniciação Científica</strong> e <strong>Empresa Júnior</strong> pesam
             muito mais no currículo para vagas em empresas boas do que estágios em
             empresas que não usam tecnologias modernas.
-          </aside>
+          </Aside>
         </Category>
 
         {/* {<div className={styles.section}>

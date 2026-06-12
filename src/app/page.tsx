@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import TopBar from "@/components/TopBar";
-import {navCards} from "@/constants/app/home";
+import CardLink from "@/components/card_link/CardLink";
+import {cards} from "@/constants/app/home";
 
 /* const navCards = [
   {
@@ -88,7 +89,7 @@ export default function Home() {
         </header>
 
         <nav className={styles.grid}>
-          {navCards.map((card) => (
+          {/* {navCards.map((card) => (
             <Link
               key={card.href}
               href={card.href}
@@ -100,7 +101,17 @@ export default function Home() {
               <p className={styles.cardDesc}>{card.desc}</p>
               <span className={styles.cardArrow}>→</span>
             </Link>
-          ))}
+          ))} */}
+
+          <CardLink cardObject={cards.portalCard}/>
+          <CardLink cardObject={cards.groupCard}/>
+          <CardLink cardObject={cards.driveCard}/>
+          <CardLink cardObject={cards.matrixCard}/>
+          <CardLink cardObject={cards.accCard}/>
+          <CardLink cardObject={cards.carrerCard}/>
+          <CardLink cardObject={cards.padrinhoCard}/>
+          <CardLink cardObject={cards.structureCard}/>
+          <CardLink cardObject={cards.faqCard}/>
         </nav>
       </main>
     </>

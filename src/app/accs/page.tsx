@@ -6,6 +6,7 @@ import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/app
 import Category from "@/components/category/Category";
 import ListItem from "@/components/listitem/ListItem";
 import {createLiArray} from "@/utils/createLiArray";
+import Aside from "@/components/aside/Aside";
 
 /* const linkRegistro = {
   nome: "Horas Complementares",
@@ -50,14 +51,7 @@ export default function ACCPage() {
           O aproveitamento é feito via requerimento à coordenação com os certificados comprobatórios.
         </p>
 
-        <aside style={{marginBottom: "32px"}}>
-          📋 <strong>Como validar:</strong> registre suas horas no{" "}
-          <a href={linkRegistro.url} target="_blank" rel="noopener noreferrer">
-            {linkRegistro.nome}
-          </a>{" "}
-          e submeta os comprovantes à coordenação para análise. Casos não previstos
-          nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
-        </aside>
+        {/**/}
 
         <Category titleText="Tabela 6 — Sem limite de aproveitamento">
           <p className={styles.body} style={{ marginBottom: "8px" }}>
@@ -137,10 +131,24 @@ export default function ACCPage() {
           </div>
         </div>} */}
 
-        <aside>
+        <Aside>
+          📋 <strong>Como validar as horas:</strong> registre suas horas no{" "}
+          <a href={linkRegistro.url} target="_blank" rel="noopener noreferrer">
+            {linkRegistro.nome}
+          </a>{" "}
+          e submeta os comprovantes à coordenação para análise. Casos não previstos
+          nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
+        </Aside>
+
+        <Aside>
+          <strong>Dica de Veterano:</strong> Começa desde o 1º período. Participar de eventos, congressos e
+          minicursos como ouvinte já conta (Tabela 6). Não deixa acumular para o último ano.
+        </Aside>
+
+        {/* <aside>
           <strong>Começa desde o 1º período.</strong> Participar de eventos, congressos e
           minicursos como ouvinte já conta (Tabela 6). Não deixa acumular para o último ano.
-        </aside>
+        </aside> */}
       </main>
     </>
   );
