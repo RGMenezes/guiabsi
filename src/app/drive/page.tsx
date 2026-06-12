@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import TopBar from "@/components/TopBar";
-import Category from "@/components/category/Category";
+import Category from "@/components/Category";
 
 export default function DrivePage() {
   return (

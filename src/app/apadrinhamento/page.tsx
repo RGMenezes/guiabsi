@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import TopBar from "@/components/TopBar";
-import {beneficios} from "@/constants/app/apadrinhamento";
-import Category from "@/components/category/Category";
+import {beneficios} from "@/constants/apadrinhamento";
+import Category from "@/components/Category";
 
 /*const beneficios = [
   {

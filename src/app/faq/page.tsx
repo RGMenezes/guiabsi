@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import faqStyles from "./faq.module.css";
 import TopBar from "@/components/TopBar";
-import {faqs} from "@/constants/app/faq";
+import {faqs} from "@/constants/faq";
 
 /* const faqs = [
   {

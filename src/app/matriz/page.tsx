@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import gradeStyles from "./matriz.module.css";
 import TopBar from "@/components/TopBar";
-import {trilhas,matrizOficial} from "@/constants/app/matriz";
+import {trilhas,matrizOficial} from "@/constants/matriz";
 
 /* const trilhas = {
   algoritmos: { nome: "Algoritmos e Estruturas de Dados", color: "#4ade80" },

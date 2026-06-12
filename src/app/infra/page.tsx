@@ -2,8 +2,8 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
 import TopBar from "@/components/TopBar";
-import {equipes, laboratorios} from "@/constants/app/infra";
-import Category from "@/components/category/Category";
+import {equipes, laboratorios} from "@/constants/infra";
+import Category from "@/components/Category";
 
 /* const equipes = [
   {

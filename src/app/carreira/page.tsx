@@ -2,9 +2,11 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import carreiraStyles from "./carreira.module.css";
 import TopBar from "@/components/TopBar";
-import {bolsas} from "@/constants/app/carreira";
-import Category from "@/components/category/Category";
-import Aside from "@/components/aside/Aside";
+import {bolsas} from "@/constants/carreira";
+import Header from "@/components/Header";
+import Category from "@/components/Category";
+import Card from "@/components/Card";
+import Aside from "@/components/Aside";
 
 /*const bolsas = [
   { name: "Monitoria", desc: "Apoio a disciplinas do núcleo básico ou específico. Ótimo para revisar conteúdo e já conta como ACC (Tabela 6, sem limite)." },
@@ -20,18 +22,16 @@ export default function CarreiraPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <h1 className={styles.title}>Carreira & Oportunidades</h1>
-        <p className={styles.subtitle}>
+        <Header titleText="Carreira & Oportunidades">
           Tudo sobre bolsas, estágio e como aproveitar experiências de carreira
           dentro do curso.
-        </p>
+        </Header>
 
         <Category titleText="Bolsas: Ganhar para Aprender" grid>
           {bolsas.map((bolsa) => (
-            <div key={bolsa.name} className={styles.card}>
-              <p className={styles.cardTitle}>{bolsa.name}</p>
-              <p className={styles.cardBody}>{bolsa.desc}</p>
-            </div>
+            <Card key={bolsa.name} titleText={bolsa.name}>
+              {bolsa.desc}
+            </Card>
           ))}
         </Category>
 
@@ -138,8 +138,9 @@ export default function CarreiraPage() {
               rel="noopener noreferrer"
               className={carreiraStyles.portalLink}
             >
-              <strong>Setor de Estágios (CENAPE)</strong>
-              <span>Orientações sobre contratos e convênios.</span>
+              <Card titleText="Setor de Estágios (CENAPE)">
+                Orientações sobre contratos e convênios.
+              </Card>
             </a>
 
             <a
@@ -148,8 +149,9 @@ export default function CarreiraPage() {
               rel="noopener noreferrer"
               className={carreiraStyles.portalLink}
             >
-              <strong>Mural de Vagas (SUAP)</strong>
-              <span>Onde aparecem os editais de monitoria e bolsas.</span>
+              <Card titleText="Mural de Vagas (SUAP)">
+                Onde aparecem os editais de monitoria e bolsas.
+              </Card>
             </a>
 
             <a
@@ -158,13 +160,15 @@ export default function CarreiraPage() {
               rel="noopener noreferrer"
               className={carreiraStyles.portalLink}
             >
-              <strong>Portal de Seleções</strong>
-              <span>Todos os editais de bolsas DAAT e prazos oficiais.</span>
+              <Card titleText="Portal de Seleções">
+                Todos os editais de bolsas DAAT e prazos oficiais.
+              </Card>
             </a>
 
-            <div className={carreiraStyles.portalLink}>
-              <strong>Coordenação do Curso</strong>
-              <span>Para tirar dúvidas sobre validação de ACCs e estágio.</span>
+            <div className={carreiraStyles.portalLink}> {/* Cadê o link (<a></a>)?? */}
+              <Card titleText="Coordenação do Curso">
+                Para tirar dúvidas sobre validação de ACCs e estágio.
+              </Card>
             </div>
         </Category>
 

@@ -44,22 +44,13 @@
   margin-top: 20px;
 }
 
-/* Estilo do link como um card clicável */
-.portalLink {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 20px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  text-decoration: none; /* Remove o sublinhado padrão */
-  color: var(--fg);
+/* Estilizar o Card como um link */
+.portalLink > div {
   transition: all 0.2s ease-in-out;
 }
 
 /* Efeito ao passar o rato ou focar */
-.portalLink:hover {
+.portalLink:hover > div {
   border-color: var(--hero-accent);
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);

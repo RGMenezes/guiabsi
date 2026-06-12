@@ -4,11 +4,11 @@ import InstallButton from "./InstallButton";
 
 export default function TopBar() {
   return (
-    <header className={styles.nav}>
+    <div className={styles.bar}>
       <Link href="/" className={styles.logo}>
         BSI<span className={styles.accent}>.</span>IFF
       </Link>
       <InstallButton />
-    </header>
+    </div>
   );
 }

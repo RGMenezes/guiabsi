@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import TopBar from "@/components/TopBar";
-import CardLink from "@/components/card_link/CardLink";
-import {cards} from "@/constants/app/home";
+import CardLink from "@/components/CardLink";
+import {cards} from "@/constants/home";
 
 /* const navCards = [
   {

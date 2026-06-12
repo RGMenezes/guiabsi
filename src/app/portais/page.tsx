@@ -2,8 +2,8 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import linkStyles from "./portais.module.css";
 import TopBar from "@/components/TopBar";
-import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/app/portais";
-import Category from "@/components/category/Category";
+import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/portais";
+import Category from "@/components/Category";
 
 /* const portais = [
   {

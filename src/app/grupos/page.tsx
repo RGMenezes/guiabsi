@@ -4,8 +4,8 @@ import groupStyles from "./grupos.module.css";
 import TopBar from "@/components/TopBar";
 /* import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
 import { MdSearchOff } from "react-icons/md"; */
-import {turmas, centroAcademico, outros} from "@/constants/app/grupos";
-import Category from "@/components/category/Category";
+import {turmas, centroAcademico, outros} from "@/constants/grupos";
+import Category from "@/components/Category";
 
 /* TODO: preencha os links reais dos grupos abaixo
 const grupos = [

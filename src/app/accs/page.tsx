@@ -2,11 +2,11 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import accStyles from "./accs.module.css";
 import TopBar from "@/components/TopBar";
-import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/app/accs";
-import Category from "@/components/category/Category";
-import ListItem from "@/components/listitem/ListItem";
+import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/accs";
+import Category from "@/components/Category";
+import ListItem from "@/components/ListItem";
 import {createLiArray} from "@/utils/createLiArray";
-import Aside from "@/components/aside/Aside";
+import Aside from "@/components/Aside";
 
 /* const linkRegistro = {
   nome: "Horas Complementares",
