@@ -1,5 +1,5 @@
 
-const portalCard: CardObject = {
+const portalCard: CardLinkObject = {
   href: "/portais",
   tag: "Acesso Diário",
   title: "Portais e Links",
@@ -7,7 +7,7 @@ const portalCard: CardObject = {
   color: "#4ad9de"
 }
 
-const groupCard: CardObject = {
+const groupCard: CardLinkObject = {
   href: "/grupos",
   tag: "Informações",
   title: "Grupos e Comunidades",
@@ -15,7 +15,7 @@ const groupCard: CardObject = {
   color: "#25d366"
 }
 
-const driveCard: CardObject = {
+const driveCard: CardLinkObject = {
   href: "/drive",
   tag: "Repositório",
   title: "Drive de Provas",
@@ -23,7 +23,7 @@ const driveCard: CardObject = {
   color: "#00e5a0"
 }
 
-const matrixCard: CardObject = {
+const matrixCard: CardLinkObject = {
   href: "/matriz",
   tag: "PPC 2025",
   title: "Matriz Curricular",
@@ -31,7 +31,7 @@ const matrixCard: CardObject = {
   color: "#38bdf8"
 }
 
-const accCard = {
+const accCard: CardLinkObject = {
   href: "/accs",
   tag: "300h Obrigatórias",
   title: "Horas Complementares",
@@ -39,7 +39,7 @@ const accCard = {
   color: "#ff6b35"
 }
 
-const carrerCard: CardObject = {
+const carrerCard: CardLinkObject = {
   href: "/carreira",
   tag: "Experiência",
   title: "Carreira e Oportunidades",
@@ -47,7 +47,7 @@ const carrerCard: CardObject = {
   color: "#ffcc00"
 }
 
-const padrinhoCard: CardObject = {
+const padrinhoCard: CardLinkObject = {
   href: "/apadrinhamento",
   tag: "Mentoria",
   title: "Apadrinhamento",
@@ -55,7 +55,7 @@ const padrinhoCard: CardObject = {
   color: "#a78bfa"
 }
 
-const structureCard: CardObject = {
+const structureCard: CardLinkObject = {
   href: "/infra",
   tag: "Laboratórios",
   title: "Equipes e Espaços",
@@ -63,7 +63,7 @@ const structureCard: CardObject = {
   color: "#f472b6"
 }
 
-const faqCard: CardObject = {
+const faqCard: CardLinkObject = {
   href: "/faq",
   tag: "Manual do Aluno",
   title: "Dúvidas Frequentes",
@@ -71,7 +71,7 @@ const faqCard: CardObject = {
   color: "#94a3b8"
 }
 
-export const cards = {
+export const cards = [
   portalCard, groupCard, driveCard, matrixCard, accCard,
   carrerCard, padrinhoCard, structureCard, faqCard
-};
+];

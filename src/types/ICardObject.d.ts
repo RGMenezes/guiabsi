@@ -1,5 +1,5 @@
 
-interface CardObject {
+interface CardLinkObject {
    href: string;
    tag: string;
    title: string;

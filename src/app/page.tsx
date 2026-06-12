@@ -89,29 +89,17 @@ export default function Home() {
         </header>
 
         <nav className={styles.grid}>
-          {/* {navCards.map((card) => (
+          {cards.map((card) => (
             <Link
               key={card.href}
               href={card.href}
-              className={styles.card}
               style={{ "--card-accent": card.color } as React.CSSProperties}
             >
-              <span className={styles.cardTag}>{card.tag}</span>
-              <h2 className={styles.cardTitle}>{card.title}</h2>
-              <p className={styles.cardDesc}>{card.desc}</p>
-              <span className={styles.cardArrow}>→</span>
+              <CardLink tagText={card.tag} titleText={card.title}>
+                {card.desc}
+              </CardLink>
             </Link>
-          ))} */}
-
-          <CardLink cardObject={cards.portalCard}/>
-          <CardLink cardObject={cards.groupCard}/>
-          <CardLink cardObject={cards.driveCard}/>
-          <CardLink cardObject={cards.matrixCard}/>
-          <CardLink cardObject={cards.accCard}/>
-          <CardLink cardObject={cards.carrerCard}/>
-          <CardLink cardObject={cards.padrinhoCard}/>
-          <CardLink cardObject={cards.structureCard}/>
-          <CardLink cardObject={cards.faqCard}/>
+          ))}
         </nav>
       </main>
     </>

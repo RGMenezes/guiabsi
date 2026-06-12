@@ -1,6 +1,5 @@
 
-// Mudança posterior nos "any"s.
-export interface Attributes {
+interface Attributes {
    childs: [
       {etiqueta: string}, // Cabeçalho
       {etiqueta: string, content: string}, // Título

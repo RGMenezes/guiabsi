@@ -1,67 +1,72 @@
 
-/* Card */
-.card {
-  position: relative;
+.cardLink {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+
   padding: 28px 24px;
-  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
   overflow: hidden;
+
+  background: var(--bg-card);
+  transition: all 0.2s ease;
+  --card-accent: inherit;
 }
 
-.card::before {
+.cardLink::before {
   content: "";
+  display: block;
+  height: 2px;
+
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 2px;
+  margin: 0;
+  
   background: var(--card-accent, var(--accent));
   opacity: 0;
   transition: opacity 0.2s;
 }
 
-.card:hover {
+.cardLink:hover {
   background: var(--bg-hover);
   border-color: var(--card-accent, var(--accent));
   transform: translateY(-2px);
 }
 
-.card:hover::before {
-  opacity: 1;
-}
+.cardLink:hover::before { opacity: 1; }
 
-.cardTag {
+
+
+.cardLinkTag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--card-accent, var(--accent));
   letter-spacing: 0.1em;
 }
 
-.cardTitle {
+.cardLinkTitle {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
-.cardDesc {
+.cardLinkDesc {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
   flex: 1;
 }
 
-.cardArrow {
+.cardLinkArrow {
   align-self: flex-end;
   font-size: 1.1rem;
   color: var(--card-accent, var(--accent));
   transition: transform 0.2s;
 }
 
-.card:hover .cardArrow {
+.cardLink:hover .cardLinkArrow {
   transform: translateX(4px);
 }

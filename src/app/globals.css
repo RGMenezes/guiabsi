@@ -40,6 +40,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  --card-accent: #c0c0c0;
 }
 
 h1, h2, h3 {

@@ -1,18 +1,14 @@
 import Link from "next/link";
 import styles from "./card_link.module.css";
 
-export default function CardLink({cardObject}: {cardObject: CardObject}) {
+// Apenas o card. Elemento de link necessário
+export default function CardLink({titleText, tagText, children}: cardLinkElems) {
    return (
-      <Link
-         key={cardObject.href}
-         href={cardObject.href}
-         className={styles.card}
-         style={{ "--card-accent": cardObject.color } as React.CSSProperties}
-      >
-         <span className={styles.cardTag}>{cardObject.tag}</span>
-         <h2 className={styles.cardTitle}>{cardObject.title}</h2>
-         <p className={styles.cardDesc}>{cardObject.desc}</p>
-         <span className={styles.cardArrow}>→</span>
-      </Link>
+      <div className={styles.cardLink}>
+         <span className={styles.cardLinkTag}>{tagText}</span>
+         <h2 className={styles.cardLinkTitle}>{titleText}</h2>
+         <p className={styles.cardLinkDesc}>{children}</p>
+         <span className={styles.cardLinkArrow}>→</span>
+      </div>
    );
 }

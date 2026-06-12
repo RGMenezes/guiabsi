@@ -44,13 +44,21 @@
   margin-top: 20px;
 }
 
-/* Estilizar o Card como um link */
-.portalLink > div {
+/* Estilizar o link que contem um componente CardLink*/
+.portalLink {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 /* Efeito ao passar o rato ou focar */
-.portalLink:hover > div {
+.portalLink:hover {
   border-color: var(--hero-accent);
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);

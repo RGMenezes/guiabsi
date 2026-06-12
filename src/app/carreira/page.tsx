@@ -6,6 +6,7 @@ import {bolsas} from "@/constants/carreira";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Card from "@/components/Card";
+import CardLink from "@/components/CardLink";
 import Aside from "@/components/Aside";
 
 /*const bolsas = [
@@ -136,39 +137,36 @@ export default function CarreiraPage() {
               href="https://portal1.iff.edu.br/nossos-campi/campos-centro/estagios"
               target="_blank"
               rel="noopener noreferrer"
-              className={carreiraStyles.portalLink}
             >
-              <Card titleText="Setor de Estágios (CENAPE)">
+              <CardLink tagText="CENAPE" titleText="Setor de Estágios">
                 Orientações sobre contratos e convênios.
-              </Card>
+              </CardLink>
             </a>
 
             <a
               href="https://suap.iff.edu.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className={carreiraStyles.portalLink}
             >
-              <Card titleText="Mural de Vagas (SUAP)">
+              <CardLink tagText="SUAP" titleText="Mural de Vagas">
                 Onde aparecem os editais de monitoria e bolsas.
-              </Card>
+              </CardLink>
             </a>
 
             <a
               href="https://selecoes.iff.edu.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className={carreiraStyles.portalLink}
             >
-              <Card titleText="Portal de Seleções">
+              <CardLink tagText="Seleções" titleText="Portal de Seleções">
                 Todos os editais de bolsas DAAT e prazos oficiais.
-              </Card>
+              </CardLink>
             </a>
 
-            <div className={carreiraStyles.portalLink}> {/* Cadê o link (<a></a>)?? */}
-              <Card titleText="Coordenação do Curso">
+            <div> {/* Cadê o link (<a></a>)?? */}
+              <CardLink tagText="Dúvidas" titleText="Coordenação do Curso">
                 Para tirar dúvidas sobre validação de ACCs e estágio.
-              </Card>
+              </CardLink>
             </div>
         </Category>
 
