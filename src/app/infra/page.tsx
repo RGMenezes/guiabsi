@@ -1,9 +1,13 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
-import TopBar from "@/components/TopBar";
+
 import {equipes, laboratorios} from "@/constants/infra";
+
+import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
 import Category from "@/components/Category";
+import Aside from "@/components/Aside";
 
 /* const equipes = [
   {
@@ -81,10 +85,14 @@ export default function InfraPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <h1 className={styles.title}>Infraestrutura & Equipes</h1>
+        {/* <h1 className={styles.title}>Infraestrutura & Equipes</h1>
         <p className={styles.subtitle}>
           Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
-        </p>
+        </p> */}
+
+        <Header titleText="Infraestrutura & Equipes">
+          Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
+        </Header>
 
         <Category titleText="Recursos e Espaços"> {/*classContent={infraStyles.infraGrid} FALHA NA IMPLEMENTAÇÃO*/}
           <div className={infraStyles.infraGrid}>
@@ -178,9 +186,9 @@ export default function InfraPage() {
           </div>
         </div>*/}
 
-        <aside>
+        <Aside>
           <strong>Dica de veterano:</strong> Participar de uma empresa júnior como a Áurea é a forma mais rápida de entender como o mercado de TI funciona na prática.
-        </aside>
+        </Aside>
       </main>
     </>
   );

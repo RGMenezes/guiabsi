@@ -4,6 +4,13 @@ interface headerAttr { // Header component
    children: React.ReactNode;
 }
 
+interface categoryAttr {
+   titleText: string;
+   divider?: boolean;
+   children: React.ReactNode;
+   grid?: boolean;
+}
+
 interface listElement { // ListItem component
    text: string;
    label?: string;

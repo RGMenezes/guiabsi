@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
+  width: 100%; /* Sempre dentro de um elemento de link */
+  height: 100%;
+  position: relative; /* Há um ::before posteriormente */
 
   padding: 28px 24px;
   border: 1px solid var(--border);
@@ -17,13 +19,12 @@
 
 .cardLink::before {
   content: "";
-  display: block;
   height: 2px;
 
   position: absolute;
   top: 0;
   left: 0;
-  margin: 0;
+  right: 0;
   
   background: var(--card-accent, var(--accent));
   opacity: 0;

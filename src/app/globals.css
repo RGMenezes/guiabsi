@@ -5,9 +5,11 @@
   --bg-card: #141414;
   --bg-hover: #1c1c1c;
   --border: #2a2a2a;
+  --divider: #808080;
   --accent: #00e5a0;
   --accent-dim: rgba(0, 229, 160, 0.12);
   --accent-2: #ff6b35;
+  --card-accent: #c0c0c0;
   --text-primary: #f0f0f0;
   --text-secondary: #888;
   --text-muted: #555;
@@ -40,7 +42,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  --card-accent: #c0c0c0;
 }
 
 h1, h2, h3 {
@@ -49,7 +50,7 @@ h1, h2, h3 {
 }
 
 hr {
-  border-color: var(--accent);
-  background-color: var(--accent);
+  border-color: var(--divider);
+  background-color: var(--divider);
   margin: 40px 0;
 }

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
-import TopBar from "@/components/TopBar";
 import {beneficios} from "@/constants/apadrinhamento";
+
+import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
 import Category from "@/components/Category";
+import Card from "@/components/Card";
 
 /*const beneficios = [
   {
@@ -26,13 +29,18 @@ export default function ApadrinhamentoPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
         
-        <h1 className={styles.title}>Apadrinhamento</h1>
+        {/* <h1 className={styles.title}>Apadrinhamento</h1>
         <p className={styles.subtitle}>
           Uma rede de mentoria direta. Cada calouro conectado a um veterano que
           já percorreu o caminho que você está começando agora.
-        </p>
+        </p> */}
 
-        <Category titleText="Como Funciona?" classContent={styles.body}>
+        <Header titleText="Apadrinhamento">
+          Uma rede de mentoria direta. Cada calouro conectado a um veterano que
+          já percorreu o caminho que você está começando agora.
+        </Header>
+
+        <Category titleText="Como Funciona?">
           <p>
             Não é uma aula extra. É um contato direto — via WhatsApp ou
             presencial — com alguém de referência para as dúvidas que você
@@ -66,10 +74,13 @@ export default function ApadrinhamentoPage() {
         <Category titleText="O que o padrinho faz por você?">
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {beneficios.map((b) => (
-              <div key={b.title} className={styles.card}>
-                <p className={styles.cardTitle}>{b.title}</p>
-                <p className={styles.cardBody}>{b.desc}</p>
-              </div>
+              // <div key={b.title} className={styles.card}>
+              //   <p className={styles.cardTitle}>{b.title}</p>
+              //   <p className={styles.cardBody}>{b.desc}</p>
+              // </div>
+              <Card key={b.title} titleText={b.title}>
+                {b.desc}
+              </Card>
             ))}
           </div>
         </Category>

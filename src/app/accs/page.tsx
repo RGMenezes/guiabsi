@@ -1,12 +1,13 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import accStyles from "./accs.module.css";
-import TopBar from "@/components/TopBar";
 import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/accs";
+import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
 import Category from "@/components/Category";
 import ListItem from "@/components/ListItem";
-import {createLiArray} from "@/utils/createLiArray";
 import Aside from "@/components/Aside";
+import {createLiArray} from "@/utils/createLiArray";
 
 /* const linkRegistro = {
   nome: "Horas Complementares",
@@ -44,12 +45,17 @@ export default function ACCPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>ACCs — PPC 2025</p>
+        {/* <p className={styles.tag}>ACCs — PPC 2025</p>
         <h1 className={styles.title}>Horas Complementares</h1>
         <p className={styles.subtitle}>
           São obrigatórias <strong>300 horas</strong> (360h/a) ao longo do curso.
           O aproveitamento é feito via requerimento à coordenação com os certificados comprobatórios.
-        </p>
+        </p> */}
+        
+        <Header titleText="Horas Complementares">
+          São obrigatórias <strong>300 horas</strong> (360h/a) ao longo do curso.
+          O aproveitamento é feito via requerimento à coordenação com os certificados comprobatórios.
+        </Header>
 
         {/**/}
 

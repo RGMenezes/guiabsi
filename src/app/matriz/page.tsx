@@ -1,8 +1,12 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import gradeStyles from "./matriz.module.css";
-import TopBar from "@/components/TopBar";
+
 import {trilhas,matrizOficial} from "@/constants/matriz";
+
+import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
+import Aside from "@/components/Aside";
 
 /* const trilhas = {
   algoritmos: { nome: "Algoritmos e Estruturas de Dados", color: "#4ade80" },
@@ -108,12 +112,17 @@ export default function GradePage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>Matriz 2025.1</p>
+        {/* <p className={styles.tag}>Matriz 2025.1</p>
         <h1 className={styles.title}>Matriz Curricular</h1>
         <p className={styles.subtitle}>
           8 semestres, 3.000h totais. Noturno, matrícula por componente curricular.
           Mínimo 8 e máximo 16 semestres para integralizar (máx. 2 trancamentos).
-        </p>
+        </p> */}
+
+        <Header titleText="Matriz Curricular">
+          8 semestres, 3.000h totais. Noturno, matrícula por componente curricular.
+          Mínimo 8 e máximo 16 semestres para integralizar (máx. 2 trancamentos).
+        </Header>
 
         <div className={gradeStyles.legenda}>
           {Object.values(trilhas).map((t) => (
@@ -144,11 +153,12 @@ export default function GradePage() {
           ))}
         </div>
 
-        <aside style={{ marginTop: "32px" }}>
+        <Aside>
           <strong>Eletivas:</strong> os temas das 2 eletivas do 8º período são definidos
           pelo NDE a cada semestre. Não é você que escolhe — o NDE define o que será
           ofertado naquele semestre.
-        </aside>
+        </Aside>
+        {/* style={{ marginTop: "32px" }} */}
       </main>
     </>
   );

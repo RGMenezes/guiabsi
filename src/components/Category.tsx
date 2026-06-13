@@ -1,16 +1,7 @@
-import LinkStyles from "./category.module.css";
 import styles from "./category.module.css";
-import {ReactElem} from "@/types/components/ReactElem";
-
-interface AttrCategory {
-   titleText: string;
-   divider?: boolean;
-   children: React.ReactNode;
-   grid?: boolean;
-}
 
 export default function Category(
-   {titleText, divider = true, grid = false, children}: AttrCategory
+   {titleText, divider = true, grid = false, children}: categoryAttr
 ) {
    return (
       <section className={styles.section}>

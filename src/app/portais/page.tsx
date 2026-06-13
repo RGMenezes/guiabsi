@@ -3,6 +3,7 @@ import styles from "../inner.module.css";
 import linkStyles from "./portais.module.css";
 import TopBar from "@/components/TopBar";
 import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/portais";
+import Header from "@/components/Header";
 import Category from "@/components/Category";
 
 /* const portais = [
@@ -103,11 +104,10 @@ export default function LinksPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <h1 className={styles.title}>Portais e Links</h1>
-        <p className={styles.subtitle}>
+        <Header titleText="Portais e Links">
           Todos os portais do IFF em um lugar só. Salva essa página nos
           favoritos — você vai precisar deles toda semana.
-        </p>
+        </Header>
 
         <Category titleText="Vida Acadêmica">
           {vidaAcademica.map(({nome, url, desc, tag}) => (

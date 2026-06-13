@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import faqStyles from "./faq.module.css";
 import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
 import {faqs} from "@/constants/faq";
 
 /* const faqs = [
@@ -82,12 +83,17 @@ export default function FAQPage() {
       <main className={styles.page}>
         <Link href="/" className={styles.back}>← voltar</Link>
 
-        <p className={styles.tag}>Dúvidas — PPC 2025</p>
+        {/* <p className={styles.tag}>Dúvidas — PPC 2025</p>
         <h1 className={styles.title}>Dúvidas Frequentes</h1>
         <p className={styles.subtitle}>
           Respostas baseadas no PPC 2025 (Resolução CONSUP 304/2025).
           Se a dúvida não estiver aqui, fala com a coordenação.
-        </p>
+        </p> */}
+
+        <Header titleText="Dúvidas Frequentes">
+          Respostas baseadas no PPC 2025 (Resolução CONSUP 304/2025).
+          Se a dúvida não estiver aqui, fala com a coordenação.
+        </Header>
 
         <div className={faqStyles.container}>
           {faqs.map((secao) => (
