@@ -1,13 +1,15 @@
-import Link from "next/link";
 import styles from "../inner.module.css";
 import accStyles from "./accs.module.css";
+
 import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/accs";
+import {createLiArray} from "@/utils/createLiArray";
+
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import ListItem from "@/components/ListItem";
 import Aside from "@/components/Aside";
-import {createLiArray} from "@/utils/createLiArray";
 
 /* const linkRegistro = {
   nome: "Horas Complementares",
@@ -42,8 +44,10 @@ export default function ACCPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        {/* <Link href="/" className={styles.back}>← voltar</Link> */}
+
+        <BackButton />
 
         {/* <p className={styles.tag}>ACCs — PPC 2025</p>
         <h1 className={styles.title}>Horas Complementares</h1>

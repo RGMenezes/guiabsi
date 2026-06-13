@@ -1,11 +1,10 @@
-import Link from "next/link";
-import styles from "../inner.module.css";
 import groupStyles from "./grupos.module.css";
 /* import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
 import { MdSearchOff } from "react-icons/md"; */
 import {turmas, centroAcademico, outros} from "@/constants/grupos";
 
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Aside from "@/components/Aside";
@@ -44,8 +43,8 @@ export default function WhatsAppPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         {/* <h1 className={styles.title}>Grupos e Comunidades</h1>
         <p className={styles.subtitle}>

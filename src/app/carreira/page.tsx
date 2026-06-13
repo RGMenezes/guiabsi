@@ -1,10 +1,14 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import carreiraStyles from "./carreira.module.css";
-import TopBar from "@/components/TopBar";
+
 import {bolsas} from "@/constants/carreira";
+
+import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import GridBox from "@/components/GridBox";
 import Card from "@/components/Card";
 import CardLink from "@/components/CardLink";
 import Aside from "@/components/Aside";
@@ -20,20 +24,22 @@ export default function CarreiraPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         <Header titleText="Carreira & Oportunidades">
           Tudo sobre bolsas, estágio e como aproveitar experiências de carreira
           dentro do curso.
         </Header>
 
-        <Category titleText="Bolsas: Ganhar para Aprender" grid>
-          {bolsas.map((bolsa) => (
-            <Card key={bolsa.name} titleText={bolsa.name}>
-              {bolsa.desc}
-            </Card>
-          ))}
+        <Category titleText="Bolsas: Ganhar para Aprender">
+          <GridBox>
+            {bolsas.map((bolsa) => (
+              <Card key={bolsa.name} titleText={bolsa.name}>
+                {bolsa.desc}
+              </Card>
+            ))}
+          </GridBox>
         </Category>
 
         {/*<div className={styles.section}>
@@ -132,7 +138,8 @@ export default function CarreiraPage() {
 
         <div className={styles.divider} />*/}
 
-        <Category titleText="Canais de Apoio e Vagas" grid divider={false}>
+        <Category titleText="Canais de Apoio e Vagas" divider={false}>
+          <GridBox>
             <a
               href="https://portal1.iff.edu.br/nossos-campi/campos-centro/estagios"
               target="_blank"
@@ -168,6 +175,7 @@ export default function CarreiraPage() {
                 Para tirar dúvidas sobre validação de ACCs e estágio.
               </CardLink>
             </div>
+          </GridBox>
         </Category>
 
         {/* <div className={styles.section}>

@@ -5,6 +5,7 @@ import gradeStyles from "./matriz.module.css";
 import {trilhas,matrizOficial} from "@/constants/matriz";
 
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Aside from "@/components/Aside";
 
@@ -109,8 +110,8 @@ export default function GradePage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         {/* <p className={styles.tag}>Matriz 2025.1</p>
         <h1 className={styles.title}>Matriz Curricular</h1>

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import styles from "../inner.module.css";
 import linkStyles from "./portais.module.css";
-import TopBar from "@/components/TopBar";
+
 import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/portais";
+
+import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 
@@ -101,8 +104,8 @@ export default function LinksPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         <Header titleText="Portais e Links">
           Todos os portais do IFF em um lugar só. Salva essa página nos

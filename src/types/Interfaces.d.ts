@@ -8,7 +8,6 @@ interface categoryAttr {
    titleText: string;
    divider?: boolean;
    children: React.ReactNode;
-   grid?: boolean;
 }
 
 interface listElement { // ListItem component

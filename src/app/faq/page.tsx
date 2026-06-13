@@ -1,9 +1,11 @@
-import Link from "next/link";
 import styles from "../inner.module.css";
 import faqStyles from "./faq.module.css";
-import TopBar from "@/components/TopBar";
-import Header from "@/components/Header";
+
 import {faqs} from "@/constants/faq";
+
+import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
+import Header from "@/components/Header";
 
 /* const faqs = [
   {
@@ -80,8 +82,8 @@ export default function FAQPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         {/* <p className={styles.tag}>Dúvidas — PPC 2025</p>
         <h1 className={styles.title}>Dúvidas Frequentes</h1>

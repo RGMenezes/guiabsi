@@ -1,6 +1,7 @@
-import Link from "next/link";
 import styles from "../inner.module.css";
+
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Aside from "@/components/Aside";
@@ -9,8 +10,8 @@ export default function DrivePage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        <BackButton />
 
         {/* <h1 className={styles.title}>Drive de Provas</h1>
         <p className={styles.subtitle}>

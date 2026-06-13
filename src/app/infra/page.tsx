@@ -1,12 +1,13 @@
-import Link from "next/link";
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
 
 import {equipes, laboratorios} from "@/constants/infra";
 
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import Card from "@/components/Card";
 import Aside from "@/components/Aside";
 
 /* const equipes = [
@@ -82,25 +83,24 @@ export default function InfraPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
-
-        {/* <h1 className={styles.title}>Infraestrutura & Equipes</h1>
-        <p className={styles.subtitle}>
-          Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
-        </p> */}
-
+      <main>
+        <BackButton />
+        
         <Header titleText="Infraestrutura & Equipes">
           Conheça os laboratórios do curso e as equipes onde a teoria do BSI vira prática.
         </Header>
 
-        <Category titleText="Recursos e Espaços"> {/*classContent={infraStyles.infraGrid} FALHA NA IMPLEMENTAÇÃO*/}
+        <Category titleText="Recursos e Espaços">
           <div className={infraStyles.infraGrid}>
             {laboratorios.map((local) => (
-              <div key={local.name} className={infraStyles.infraCard}>
-                <strong>{local.name}</strong>
-                <p>{local.desc}</p>
-              </div>
+              // <div key={local.name} className={infraStyles.infraCard}>
+              //   <strong>{local.name}</strong>
+              //   <p>{local.desc}</p>
+              // </div>
+
+              <Card key={local.name} titleText={local.name}>
+                {local.desc}
+              </Card>
             ))}
           </div>
         </Category>

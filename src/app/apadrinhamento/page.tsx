@@ -1,8 +1,8 @@
-import Link from "next/link";
 import styles from "../inner.module.css";
 import {beneficios} from "@/constants/apadrinhamento";
 
 import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Card from "@/components/Card";
@@ -26,8 +26,9 @@ export default function ApadrinhamentoPage() {
   return (
     <>
       <TopBar />
-      <main className={styles.page}>
-        <Link href="/" className={styles.back}>← voltar</Link>
+      <main>
+        {/* <Link href="/" className={styles.back}>← voltar</Link> */}
+        <BackButton />
         
         {/* <h1 className={styles.title}>Apadrinhamento</h1>
         <p className={styles.subtitle}>
