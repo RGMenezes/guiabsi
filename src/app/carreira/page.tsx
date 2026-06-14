@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import carreiraStyles from "./carreira.module.css";
 
-import {bolsas} from "@/constants/carreira";
+import {bolsas} from "@/data/carreira";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

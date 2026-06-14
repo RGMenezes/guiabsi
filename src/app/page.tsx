@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import TopBar from "@/components/TopBar";
 import CardLink from "@/components/CardLink";
-import {cards} from "@/constants/home";
+import {cards} from "@/data/home";
 
 /* const navCards = [
   {

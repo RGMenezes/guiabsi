@@ -1,7 +1,7 @@
 import groupStyles from "./grupos.module.css";
 /* import { FaDiscord, FaInfoCircle, FaShoppingBag, FaUsers, FaUtensils, FaWhatsapp } from "react-icons/fa";
 import { MdSearchOff } from "react-icons/md"; */
-import {turmas, centroAcademico, outros} from "@/constants/grupos";
+import {turmas, centroAcademico, outros} from "@/data/grupos";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

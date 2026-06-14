@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import linkStyles from "./portais.module.css";
 
-import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/constants/portais";
+import {vidaAcademica, salasVirtuais, oportunidades, docServicos} from "@/data/portais";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

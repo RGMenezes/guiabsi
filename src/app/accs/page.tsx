@@ -1,7 +1,7 @@
 import styles from "../inner.module.css";
 import accStyles from "./accs.module.css";
 
-import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/constants/accs";
+import {linkRegistro, tabelaSemLimite, tabelaComConversao} from "@/data/accs";
 import {createLiArray} from "@/utils/createLiArray";
 
 import TopBar from "@/components/TopBar";

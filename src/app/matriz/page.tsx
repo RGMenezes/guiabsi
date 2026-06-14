@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../inner.module.css";
 import gradeStyles from "./matriz.module.css";
 
-import {trilhas,matrizOficial} from "@/constants/matriz";
+import {trilhas,matrizOficial} from "@/data/matriz";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

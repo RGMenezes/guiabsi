@@ -1,7 +1,7 @@
 import styles from "../inner.module.css";
 import infraStyles from "./infra.module.css";
 
-import {equipes, laboratorios} from "@/constants/infra";
+import {equipes, laboratorios} from "@/data/infra";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

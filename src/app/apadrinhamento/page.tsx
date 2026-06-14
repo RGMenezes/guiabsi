@@ -1,5 +1,5 @@
 import styles from "../inner.module.css";
-import {beneficios} from "@/constants/apadrinhamento";
+import {beneficios} from "@/data/apadrinhamento";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";

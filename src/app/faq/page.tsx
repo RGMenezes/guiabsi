@@ -1,7 +1,7 @@
 import styles from "../inner.module.css";
 import faqStyles from "./faq.module.css";
 
-import {faqs} from "@/constants/faq";
+import {faqs} from "@/data/faq";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
