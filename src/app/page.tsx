@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import TopBar from "@/components/TopBar";
-import CardLink from "@/components/CardLink";
+import Card from "@/components/Card";
 import {cards} from "@/data/home";
 
 /* const navCards = [
@@ -95,9 +95,9 @@ export default function Home() {
               href={card.href}
               style={{ "--card-accent": card.color } as React.CSSProperties}
             >
-              <CardLink tagText={card.tag} titleText={card.title}>
+              <Card tagText={card.tag} titleText={card.title} url={card.href}>
                 {card.desc}
-              </CardLink>
+              </Card>
             </Link>
           ))}
         </nav>

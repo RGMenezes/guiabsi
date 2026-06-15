@@ -10,7 +10,6 @@ import Header from "@/components/Header";
 import Category from "@/components/Category";
 import GridBox from "@/components/GridBox";
 import Card from "@/components/Card";
-import CardLink from "@/components/CardLink";
 import Aside from "@/components/Aside";
 
 /*const bolsas = [
@@ -145,9 +144,13 @@ export default function CarreiraPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardLink tagText="CENAPE" titleText="Setor de Estágios">
+              <Card
+                tagText="CENAPE"
+                titleText="Setor de Estágios"
+                url="https://portal1.iff.edu.br/nossos-campi/campos-centro/estagios"
+              >
                 Orientações sobre contratos e convênios.
-              </CardLink>
+              </Card>
             </a>
 
             <a
@@ -155,9 +158,13 @@ export default function CarreiraPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardLink tagText="SUAP" titleText="Mural de Vagas">
+              <Card
+                tagText="SUAP"
+                titleText="Mural de Vagas"
+                url="https://suap.iff.edu.br/"
+              >
                 Onde aparecem os editais de monitoria e bolsas.
-              </CardLink>
+              </Card>
             </a>
 
             <a
@@ -165,15 +172,22 @@ export default function CarreiraPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardLink tagText="Seleções" titleText="Portal de Seleções">
+              <Card
+                tagText="Seleções"
+                titleText="Portal de Seleções"
+                url="https://selecoes.iff.edu.br/"
+              >
                 Todos os editais de bolsas DAAT e prazos oficiais.
-              </CardLink>
+              </Card>
             </a>
 
             <div> {/* Cadê o link (<a></a>)?? */}
-              <CardLink tagText="Dúvidas" titleText="Coordenação do Curso">
+              <Card
+                tagText="Dúvidas"
+                titleText="Coordenação do Curso"
+              >
                 Para tirar dúvidas sobre validação de ACCs e estágio.
-              </CardLink>
+              </Card>
             </div>
           </GridBox>
         </Category>

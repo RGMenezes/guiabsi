@@ -44,7 +44,7 @@
   margin-top: 20px;
 }
 
-/* Estilizar o link que contem um componente CardLink*/
+/* Estilizar o link que contem um componente Card*/
 .portalLink {
   display: flex;
   flex-direction: column;

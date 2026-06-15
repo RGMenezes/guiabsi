@@ -1,14 +1,21 @@
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
   background: var(--bg-card);
+  position: relative; /* Pode haver um ::before */
+
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px;
+  overflow: hidden;
 }
 
 .cardTitle {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
@@ -16,5 +23,80 @@
 .cardBody {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
+  flex: 1;
 }
+
+
+
+
+.link {
+  width: 100%; /* Sempre dentro de um elemento de link */
+  height: 100%;
+  padding: 28px 24px !important;
+
+  transition: all 0.2s ease;
+  --card-accent: inherit;
+}
+
+.link::before {
+  content: "";
+  height: 2px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  background: var(--card-accent, var(--accent));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  background: var(--bg-hover);
+  border-color: var(--card-accent, var(--accent));
+  transform: translateY(-2px);
+}
+
+.link:hover::before { opacity: 1; }
+
+
+
+.linkTag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--card-accent, var(--accent));
+  letter-spacing: 0.1em;
+}
+
+
+.urlContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 95%;
+  transition: transform 0.2s;
+}
+
+.url {
+  /* font-family: var(--font-mono);
+  font-size: 0.72rem; */
+  font: 0.72rem/1.8rem var(--font-mono);
+  color: var(--text-muted);
+  transition: color 0.2s;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.link:hover .url { color: var(--card-accent); }
+
+.urlArrow {
+  font-size: 1.1rem;
+  color: var(--card-accent, var(--accent));
+}
+
+.link:hover .urlContainer { transform: translateX(4px); }

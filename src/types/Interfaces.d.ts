@@ -10,13 +10,22 @@ interface categoryAttr {
    children: React.ReactNode;
 }
 
+interface cardAttr {
+   tagText?: string;
+   titleText: string;
+   url?: string;
+   children: React.ReactNode;
+}
+
+interface cardData {
+   href: string;
+   tag: string;
+   title: string;
+   desc: string;
+   color: string;
+}
+
 interface listElement { // ListItem component
    text: string;
    label?: string;
-}
-
-interface cardLinkElems { // CardLink component
-   titleText: string;
-   tagText: string;
-   children: React.ReactNode;
 }

@@ -1,5 +1,5 @@
 
-const portalCard: CardLinkObject = {
+const portalCard: cardData = {
   href: "/portais",
   tag: "Acesso Diário",
   title: "Portais e Links",
@@ -7,7 +7,7 @@ const portalCard: CardLinkObject = {
   color: "#4ad9de"
 }
 
-const groupCard: CardLinkObject = {
+const groupCard: cardData = {
   href: "/grupos",
   tag: "Informações",
   title: "Grupos e Comunidades",
@@ -15,7 +15,7 @@ const groupCard: CardLinkObject = {
   color: "#25d366"
 }
 
-const driveCard: CardLinkObject = {
+const driveCard: cardData = {
   href: "/drive",
   tag: "Repositório",
   title: "Drive de Provas",
@@ -23,7 +23,7 @@ const driveCard: CardLinkObject = {
   color: "#00e5a0"
 }
 
-const matrixCard: CardLinkObject = {
+const matrixCard: cardData = {
   href: "/matriz",
   tag: "PPC 2025",
   title: "Matriz Curricular",
@@ -31,7 +31,7 @@ const matrixCard: CardLinkObject = {
   color: "#38bdf8"
 }
 
-const accCard: CardLinkObject = {
+const accCard: cardData = {
   href: "/accs",
   tag: "300h Obrigatórias",
   title: "Horas Complementares",
@@ -39,7 +39,7 @@ const accCard: CardLinkObject = {
   color: "#ff6b35"
 }
 
-const carrerCard: CardLinkObject = {
+const carrerCard: cardData = {
   href: "/carreira",
   tag: "Experiência",
   title: "Carreira e Oportunidades",
@@ -47,7 +47,7 @@ const carrerCard: CardLinkObject = {
   color: "#ffcc00"
 }
 
-const padrinhoCard: CardLinkObject = {
+const padrinhoCard: cardData = {
   href: "/apadrinhamento",
   tag: "Mentoria",
   title: "Apadrinhamento",
@@ -55,7 +55,7 @@ const padrinhoCard: CardLinkObject = {
   color: "#a78bfa"
 }
 
-const structureCard: CardLinkObject = {
+const structureCard: cardData = {
   href: "/infra",
   tag: "Laboratórios",
   title: "Equipes e Espaços",
@@ -63,7 +63,7 @@ const structureCard: CardLinkObject = {
   color: "#f472b6"
 }
 
-const faqCard: CardLinkObject = {
+const faqCard: cardData = {
   href: "/faq",
   tag: "Manual do Aluno",
   title: "Dúvidas Frequentes",
