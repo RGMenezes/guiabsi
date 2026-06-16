@@ -8,6 +8,7 @@ import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import Card from "@/components/Card";
 
 /* const portais = [
   {
@@ -119,9 +120,9 @@ export default function LinksPage() {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className={linkStyles.portalCard}
+              className={linkStyles.linkCard}
             >
-              <div className={linkStyles.cardHeader}>
+              {/* <div className={linkStyles.cardHeader}>
                 <span className={linkStyles.portalName}>{nome}</span>
                 {tag && (
                   <span className={linkStyles.badge}>{tag}</span>
@@ -130,7 +131,11 @@ export default function LinksPage() {
               <p className={linkStyles.portalDesc}>{desc}</p>
               <span className={linkStyles.url}>
                 {url.replace("https://", "").replace(/\/$/, "")}
-              </span>
+              </span> */}
+
+              <Card tagText={tag ? tag : undefined} titleText={nome} url={url}>
+                {desc}
+              </Card>
             </a>
           ))}
         </Category>
@@ -142,9 +147,9 @@ export default function LinksPage() {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className={linkStyles.portalCard}
+              className={linkStyles.linkCard}
             >
-              <div className={linkStyles.cardHeader}>
+              {/* <div className={linkStyles.cardHeader}>
                 <span className={linkStyles.portalName}>{nome}</span>
                 {tag && (
                   <span className={linkStyles.badge}>{tag}</span>
@@ -153,7 +158,11 @@ export default function LinksPage() {
               <p className={linkStyles.portalDesc}>{desc}</p>
               <span className={linkStyles.url}>
                 {url.replace("https://", "").replace(/\/$/, "")}
-              </span>
+              </span> */}
+
+              <Card tagText={tag ? tag : undefined} titleText={nome} url={url}>
+                {desc}
+              </Card>
             </a>
           ))}
         </Category>
@@ -165,9 +174,9 @@ export default function LinksPage() {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className={linkStyles.portalCard}
+              className={linkStyles.linkCard}
             >
-              <div className={linkStyles.cardHeader}>
+              {/* <div className={linkStyles.cardHeader}>
                 <span className={linkStyles.portalName}>{nome}</span>
                 {tag && (
                   <span className={linkStyles.badge}>{tag}</span>
@@ -176,7 +185,11 @@ export default function LinksPage() {
               <p className={linkStyles.portalDesc}>{desc}</p>
               <span className={linkStyles.url}>
                 {url.replace("https://", "").replace(/\/$/, "")}
-              </span>
+              </span> */}
+
+              <Card tagText={tag ? tag : undefined} titleText={nome} url={url}>
+                {desc}
+              </Card>
             </a>
           ))}
         </Category>
@@ -188,9 +201,9 @@ export default function LinksPage() {
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              className={linkStyles.portalCard}
+              className={linkStyles.linkCard}
             >
-              <div className={linkStyles.cardHeader}>
+              {/* <div className={linkStyles.cardHeader}>
                 <span className={linkStyles.portalName}>{nome}</span>
                 {tag && (
                   <span className={linkStyles.badge}>{tag}</span>
@@ -199,7 +212,11 @@ export default function LinksPage() {
               <p className={linkStyles.portalDesc}>{desc}</p>
               <span className={linkStyles.url}>
                 {url.replace("https://", "").replace(/\/$/, "")}
-              </span>
+              </span> */}
+
+              <Card tagText={tag ? tag : undefined} titleText={nome} url={url}>
+                {desc}
+              </Card>
             </a>
           ))}
         </Category>
@@ -214,7 +231,7 @@ export default function LinksPage() {
                   href={portal.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={linkStyles.portalCard}
+                  className={linkStyles.linkCard}
                 >
                   <div className={linkStyles.cardHeader}>
                     <span className={linkStyles.portalName}>{portal.nome}</span>

@@ -181,14 +181,19 @@ export default function CarreiraPage() {
               </Card>
             </a>
 
-            <div> {/* Cadê o link (<a></a>)?? */}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Card
                 tagText="Dúvidas"
                 titleText="Coordenação do Curso"
+                url="Indisponível :("
               >
                 Para tirar dúvidas sobre validação de ACCs e estágio.
               </Card>
-            </div>
+            </a>
           </GridBox>
         </Category>
 
