@@ -6,6 +6,7 @@ import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Card from "@/components/Card";
+import CallToAction from "@/components/CallToAction";
 
 /*const beneficios = [
   {
@@ -100,14 +101,19 @@ export default function ApadrinhamentoPage() {
 
         <div className={styles.divider} />*/}
 
-        <a
+        {/* <a
           href="https://forms.gle/mKffnbdotMWouqCQ6"
           className={styles.ctaBtn}
           target="_blank"
           rel="noopener noreferrer"
         >
           Preencher formulário →
-        </a>
+        </a> */}
+
+        <CallToAction url="https://forms.gle/mKffnbdotMWouqCQ6">
+          Preencher formulário →
+        </CallToAction>
+
         <p style={{ marginTop: "12px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
           {/* TODO: substituir href="#" pelo link do formulário de inscrição */}
         </p>

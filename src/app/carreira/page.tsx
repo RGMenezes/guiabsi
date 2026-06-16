@@ -9,6 +9,7 @@ import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import GridBox from "@/components/GridBox";
+import BodyText from "@/components/BodyText";
 import Card from "@/components/Card";
 import Aside from "@/components/Aside";
 
@@ -56,7 +57,7 @@ export default function CarreiraPage() {
         <div className={styles.divider} />*/}
 
         <Category titleText="Estágio (PPC 2025)">
-          <div className={styles.body}>
+          {/* <div className={styles.body}>
             <p>
               O estágio curricular no BSI é <strong>não obrigatório (optativo)</strong>.
               Se você fizer, precisa de contrato oficial (TCE) e carga mínima de{" "}
@@ -67,7 +68,19 @@ export default function CarreiraPage() {
               <strong>Tabela 6</strong> (sem limite de aproveitamento). As horas do
               certificado valem diretamente — não tem fórmula de conversão.
             </p>
-          </div>
+          </div> */}
+          
+          <BodyText>
+            O estágio curricular no BSI é <strong>não obrigatório (optativo)</strong>.
+            Se você fizer, precisa de contrato oficial (TCE) e carga mínima de{" "}
+            <strong>200 horas</strong>. Estágio sem contrato não conta nada.
+          </BodyText>
+
+          <BodyText>
+            Tanto o estágio quanto o emprego na área contam como ACC pela{" "}
+            <strong>Tabela 6</strong> (sem limite de aproveitamento). As horas do
+            certificado valem diretamente — não tem fórmula de conversão.
+          </BodyText>
         </Category>
 
         {/*<div className={styles.section}>

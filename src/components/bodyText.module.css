@@ -1,0 +1,12 @@
+
+.textSecondary {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 6px 0;
+}
+
+.textSecondary strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}

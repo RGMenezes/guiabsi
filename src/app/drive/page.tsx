@@ -4,7 +4,9 @@ import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import BodyText from "@/components/BodyText";
 import Aside from "@/components/Aside";
+import CallToAction from "@/components/CallToAction";
 
 export default function DrivePage() {
   return (
@@ -25,7 +27,7 @@ export default function DrivePage() {
         </Header>
 
         <Category titleText="O que é?">
-          <div className={styles.body}>
+          {/* <div className={styles.body}>
             <p>
               Um Google Drive compartilhado com provas de períodos anteriores,{" "}
               organizadas por matéria. É a melhor forma de entender o estilo de
@@ -36,7 +38,19 @@ export default function DrivePage() {
               <strong>período</strong>. Quer saber como é a P1 de Lógica
               Matemática? Está lá.
             </p>
-          </div>
+          </div> */}
+
+          <BodyText>
+            Um Google Drive compartilhado com provas de períodos anteriores,{" "}
+            organizadas por matéria. É a melhor forma de entender o estilo de
+            cada professor e os temas que mais caem.
+          </BodyText>
+
+          <BodyText>
+            As pastas estão divididas por <strong>matéria</strong> e{" "}
+            <strong>período</strong>. Quer saber como é a P1 de Lógica
+            Matemática? Está lá.
+          </BodyText>
         </Category>
 
         {/*<div className={styles.section}>
@@ -76,14 +90,19 @@ export default function DrivePage() {
 
         <div className={styles.divider} />*/}
 
-        <a
+        {/* <a
           href="https://drive.google.com/drive/folders/1nhrcyKYEns-JBUoH1tpj4id01QOGTrlT?usp=drive_link"
           className={styles.ctaBtn}
           target="_blank"
           rel="noopener noreferrer"
         >
           Acessar o Drive →
-        </a>
+        </a> */}
+
+        <CallToAction url="https://drive.google.com/drive/folders/1nhrcyKYEns-JBUoH1tpj4id01QOGTrlT?usp=drive_link">
+          Acessar o Drive →
+        </CallToAction>
+
         <p style={{ marginTop: "12px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
           {/* TODO: substituir o href="#" pelo link real do Drive */}
           Salva nos favoritos. Você vai precisar na semana de provas.

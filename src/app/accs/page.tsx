@@ -8,6 +8,7 @@ import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import BodyText from "@/components/BodyText";
 import ListItem from "@/components/ListItem";
 import Aside from "@/components/Aside";
 
@@ -38,8 +39,6 @@ const tabelaComConversao = [
   { atividade: "Certificação na área do curso", paridade: "3h por certificação" },
 ]; // OK */
 
-const classCategory = styles.body;
-
 export default function ACCPage() {
   return (
     <>
@@ -64,10 +63,16 @@ export default function ACCPage() {
         {/**/}
 
         <Category titleText="Tabela 6 — Sem limite de aproveitamento">
-          <p className={styles.body} style={{ marginBottom: "8px" }}>
+          {/* <p className={styles.body} style={{ marginBottom: "8px" }}>
             Atividades abaixo são aproveitadas integralmente (as horas do certificado valem direto),
             sem teto máximo de horas por categoria.
-          </p>
+          </p> */}
+
+          <BodyText>
+            Atividades abaixo são aproveitadas integralmente (as horas do certificado valem direto),
+            sem teto máximo de horas por categoria.
+          </BodyText>
+
           <ul className={accStyles.listaSemLimite}>
             {createLiArray(tabelaSemLimite)}
             
@@ -102,10 +107,16 @@ export default function ACCPage() {
         {/*<div className={styles.divider} />*/}
 
         <Category titleText="Tabela 7 — Com conversão de horas">
-          <p className={styles.body} style={{ marginBottom: "16px" }}>
+          {/* <p className={styles.body} style={{ marginBottom: "16px" }}>
             Atividades com paridade definida: o número de horas de ACC é fixo
             independente do tempo dedicado.
-          </p>
+          </p> */}
+
+          <BodyText>
+            Atividades com paridade definida: o número de horas de ACC é fixo
+            independente do tempo dedicado.
+          </BodyText>
+
           <ul className={accStyles.listaConversao}>
             {createLiArray(tabelaComConversao)}
 

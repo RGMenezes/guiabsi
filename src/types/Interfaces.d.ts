@@ -34,3 +34,9 @@ interface labelAttr {
    dynamic?: boolean;
    children: React.ReactNode;
 }
+
+interface callToActionAttr {
+   url?: string;
+   click?: () => void;
+   children: React.ReactNode;
+}

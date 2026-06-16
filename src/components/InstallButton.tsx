@@ -1,8 +1,14 @@
 "use client";
-import { useEffect, useState } from "react";
+
 import styles from "@/app/inner.module.css";
 import stylesButton from "./InstallButton.module.css";
+
+import { useEffect, useState } from "react";
 import { MdSmartphone } from "react-icons/md";
+
+import CallToAction from "./CallToAction";
+
+
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -48,9 +54,14 @@ export default function InstallButton() {
   };
 
   return (
-    <button onClick={handleInstall} className={`${stylesButton.button} ${styles.ctaBtn}`}>
+    // <button onClick={handleInstall} className={`${stylesButton.button} ${styles.ctaBtn}`}>
+    //   Adicionar Atalho
+    //   <MdSmartphone />
+    // </button>
+
+    <CallToAction click={handleInstall}>
       Adicionar Atalho
       <MdSmartphone />
-    </button>
+    </CallToAction>
   );
 }
