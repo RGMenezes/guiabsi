@@ -1,7 +1,6 @@
-import {ReactElem} from "@/types/components/ReactElem";
 import ListItem from "@/components/ListItem";
 
-export function createLiArray(texts: IlistElement[]): ReactElem | null {
+export function createLiArray(texts: listElement[]): React.ReactNode | null {
    const result: any[] = [], size: number = texts.length;
 
    for (let index = 0; index < size; index++) {

@@ -11,6 +11,7 @@
   --accent: #00e5a0;
   --accent-dim: rgba(0, 229, 160, 0.12);
   --accent-2: #ff6b35;
+  --c-label: var(--accent);
   --card-accent: #c0c0c0;
   --text-primary: #f0f0f0;
   --text-secondary: #888;

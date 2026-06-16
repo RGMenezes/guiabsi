@@ -25,7 +25,12 @@ interface cardData {
    color: string;
 }
 
-interface listElement { // ListItem component
-   text: string;
-   label?: string;
+interface listItemAttr {
+   tagContent?: string;
+   children: React.ReactNode;
+}
+
+interface labelAttr {
+   dynamic?: boolean;
+   children: React.ReactNode;
 }

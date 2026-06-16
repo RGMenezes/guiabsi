@@ -1,20 +1,7 @@
-import {ReactElem} from "@/types/components/ReactElem";
 import style from "./ListItem.module.css";
+import Label from "./Label";
 
-interface Topic {
-   tagContent?: string;
-   children: ReactElem;
-}
-
-export default function ListItem({tagContent, children}: Topic): ReactElem {
-   let labelElem: any = null;
-
-   if (tagContent) {
-      labelElem = (
-         <span className={style.label}>{tagContent}</span>
-      );
-   }
-
+export default function ListItem({tagContent, children}: listItemAttr) {
    return (
       <li className={style.compactLi}>
          <div>
@@ -22,7 +9,7 @@ export default function ListItem({tagContent, children}: Topic): ReactElem {
             {children}
          </div>
 
-         {labelElem}
+         {tagContent && <Label>{tagContent}</Label>}
       </li>
    );
 }
