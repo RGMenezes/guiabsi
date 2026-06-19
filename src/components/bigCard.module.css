@@ -1,0 +1,21 @@
+
+.bigCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px;
+  background: var(--bg-card);
+  position: relative; /* Pode haver um ::before */
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.bigCard > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}

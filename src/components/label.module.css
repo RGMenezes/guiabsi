@@ -8,20 +8,20 @@
   white-space: nowrap;
   
   padding: 3px 8px;
-  border: 1px solid;
+  /* border: 1px solid; */
   border-radius: 4px;
 }
 
 .static {
    color: var(--c-label);
    background-color: var(--accent-dim);
-   border-color: rgba(0, 229, 160, 0.2);
+   /* border-color: rgba(0, 229, 160, 0.2); */
 }
 
 .dynamic {
    color: var(--c-label);
    background-color: transparent;
-   border-color: var(--c-label);
+   border: 1px solid var(--c-label);
 
    transition-property: color, background-color, border-color;
    transition-duration: 0.3s;

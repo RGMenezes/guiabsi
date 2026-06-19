@@ -32,12 +32,12 @@
   margin-top: 20px;
 }
 
-.cardHeader {
+/* .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 12px;
-}
+} */
 
 .tag {
   font-size: 0.65rem;
@@ -53,7 +53,7 @@
   gap: 10px;
 }
 
-.socials a {
+/* .socials a {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -68,4 +68,4 @@
 .socials a:hover {
   border-color: var(--border) !important;
   color: var(--text-secondary) !important;
-}
+} */

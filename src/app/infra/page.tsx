@@ -8,6 +8,8 @@ import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
 import Card from "@/components/Card";
+import BigCard from "@/components/BigCard";
+import Label from "@/components/Label";
 import Aside from "@/components/Aside";
 
 /* const equipes = [
@@ -122,32 +124,33 @@ export default function InfraPage() {
         <Category titleText="Equipes De Competição E Prática" divider={false}>
           <div className={infraStyles.equipeList}>
             {equipes.map((e) => (
-              <div
-                key={e.name}
-                className={styles.card}
-                style={{ borderLeft: `4px solid ${e.color}` }}
-              >
-                <div className={infraStyles.cardHeader}>
+              <BigCard key={e.name}>
+                <header style={{"--c-label": "#202020", "--accent-dim": e.color} as React.CSSProperties}>
                   <div>
-                    <span className={infraStyles.tag} style={{ backgroundColor: `${e.color}22`, color: e.color }}>
+                    {/* <span className={infraStyles.tag} style={{ backgroundColor: `${e.color}22`, color: e.color }}>
                       {e.tag}
-                    </span>
+                    </span> */}
+
+                    <Label>{e.tag}</Label>
                     <p className={styles.cardTitle} style={{ marginTop: "8px" }}>{e.name}</p>
                   </div>
                   
                   {/* Links Sociais (Aparecem apenas se existirem) */}
                   {(e.insta || e.site) && (
-                    <div className={infraStyles.socials}>
-                      {e.email && <a href={e.email} style={{ color: e.color, borderColor: e.color }} target="_blank" title="E-mail">E-mail</a>}
-                      {e.siteInter && <a href={e.siteInter} style={{ color: e.color, borderColor: e.color}} target="_blank" title="WebsiteInternacional">Site Inter</a>}
-                      {e.insta && <a href={e.insta} style={{ color: e.color, borderColor: e.color }} target="_blank" title="Instagram">Insta</a>}
-                      {e.site && <a href={e.site} style={{ color: e.color, borderColor: e.color}} target="_blank" title="Website">Site</a>}
+                    <div
+                      className={infraStyles.socials}
+                      style={{"--c-label": e.color} as React.CSSProperties}
+                    >
+                      {e.email && <a href={e.email} target="_blank" title="E-mail"><Label dynamic>E-mail</Label></a>}
+                      {e.siteInter && <a href={e.siteInter} target="_blank" title="WebsiteInternacional"><Label dynamic>Site Inter</Label></a>}
+                      {e.insta && <a href={e.insta} target="_blank" title="Instagram"><Label dynamic>Insta</Label></a>}
+                      {e.site && <a href={e.site} target="_blank" title="Website"><Label dynamic>Site</Label></a>}
                     </div>
                   )}
-                </div>
+                </header>
                 
                 <p className={styles.cardBody}>{e.desc}</p>
-              </div>
+              </BigCard>
             ))}
           </div>
         </Category>
