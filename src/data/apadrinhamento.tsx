@@ -1,15 +1,15 @@
 
-export const beneficios = [
+export const veteranWorks: veteranWorksData[] = [
   {
-    title: "Caminho das Pedras",
+    name: "Caminho das Pedras",
     desc: "Quais livros realmente usar e como cada professor gosta que as provas sejam feitas.",
   },
   {
-    title: "Sobrevivência Institucional",
+    name: "Sobrevivência Institucional",
     desc: "Como navegar no sistema acadêmico, entender o histórico e não perder prazos de matrícula.",
   },
   {
-    title: "Networking",
+    name: "Networking",
     desc: "Te apresenta ao restante da faculdade e ajuda a entrar no ritmo da cultura de BSI.",
   },
 ];

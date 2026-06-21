@@ -1,11 +1,11 @@
 
-const linkRegistro = {
-  nome: "Horas Complementares",
+const recordingHours: recordingHoursData = {
+  name: "Horas Complementares",
   url: "https://inf.centro.iff.edu.br/",
   desc: "Site para registro de horas complementares.",
 };
 
-const tabelaSemLimite: IlistElement[] = [
+const unlimitedHours: HoursTypesData[] = [
   {text: "Curso de idioma realizado durante o curso"},
   {text: "Emprego na área realizado durante o curso"},
   {text: "Estágio realizado durante o curso"},
@@ -17,7 +17,7 @@ const tabelaSemLimite: IlistElement[] = [
   {text: "Serviço voluntário de caráter sócio comunitário (Lei 9.608/1998)"},
 ];
 
-const tabelaComConversao: IlistElement[] = [
+const fixedHours: HoursTypesData[] = [
   { text: "Apresentação de artigo em eventos científicos", label: "5h por publicação" },
   { text: "Publicação de artigo científico (autor ou coautor)", label: "3h por publicação" },
   { text: "Publicação de produção autoral (foto, artigo, reportagem ou similar) em periódico ou site", label: "2h por publicação" },
@@ -26,4 +26,4 @@ const tabelaComConversao: IlistElement[] = [
   { text: "Certificação na área do curso", label: "3h por certificação" },
 ];
 
-export {linkRegistro, tabelaSemLimite, tabelaComConversao};
+export {recordingHours, unlimitedHours, fixedHours};

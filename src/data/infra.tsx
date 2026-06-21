@@ -1,5 +1,5 @@
 
-const equipes = [
+const teams: teamsData[] = [
   {
     tag: "Empresa Júnior",
     name: "Áurea",
@@ -49,7 +49,7 @@ const equipes = [
   }
 ];
 
-const laboratorios = [
+const labs = [
   {
     name: "Laboratórios de Informática",
     desc: "Ambientes climatizados com softwares específicos para desenvolvimento, banco de dados e redes.",
@@ -68,4 +68,4 @@ const laboratorios = [
   },
 ];
 
-export {equipes, laboratorios};
+export {teams, labs};

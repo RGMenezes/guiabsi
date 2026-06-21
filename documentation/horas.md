@@ -1,4 +1,4 @@
 #Registro de horas dedicadas ao projeto.
 
 *nome:* Gabriel Ribeiro Ciafrino.
-*Horas dedicadas:* 25h:12min.
+*Horas dedicadas:* 28h:54min.
