@@ -45,11 +45,6 @@ export default function DrivePage() {
         <CallToAction url="https://drive.google.com/drive/folders/1nhrcyKYEns-JBUoH1tpj4id01QOGTrlT?usp=drive_link">
           Acessar o Drive →
         </CallToAction>
-
-        {/* <p style={{ marginTop: "12px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-          {/* TODO: substituir o href="#" pelo link real do Drive }
-          Salva nos favoritos. Você vai precisar na semana de provas.
-        </p> */}
       </main>
     </>
   );

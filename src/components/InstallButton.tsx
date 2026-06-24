@@ -54,11 +54,6 @@ export default function InstallButton() {
   };
 
   return (
-    // <button onClick={handleInstall} className={`${stylesButton.button} ${styles.ctaBtn}`}>
-    //   Adicionar Atalho
-    //   <MdSmartphone />
-    // </button>
-
     <CallToAction click={handleInstall}>
       Adicionar Atalho
       <MdSmartphone />

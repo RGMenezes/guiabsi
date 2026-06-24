@@ -32,13 +32,6 @@
   margin-top: 20px;
 }
 
-/* .cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 12px;
-} */
-
 .tag {
   font-size: 0.65rem;
   font-weight: bold;
@@ -52,20 +45,3 @@
   display: flex;
   gap: 10px;
 }
-
-/* .socials a {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  color: var(--accent);
-  text-decoration: none;
-  padding: 4px 8px;
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.socials a:hover {
-  border-color: var(--border) !important;
-  color: var(--text-secondary) !important;
-} */

@@ -35,8 +35,8 @@ export default function ApadrinhamentoPage() {
 
         <Category titleText="O que o padrinho faz por você?">
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            {veteranWorks.map(({title, desc}) => (
-              <Card key={title} titleText={title}>
+            {veteranWorks.map(({name, desc}) => (
+              <Card key={name} titleText={name}>
                 {desc}
               </Card>
             ))}
@@ -46,10 +46,6 @@ export default function ApadrinhamentoPage() {
         <CallToAction url="https://forms.gle/mKffnbdotMWouqCQ6">
           Preencher formulário →
         </CallToAction>
-
-        {/* <p style={{ marginTop: "12px", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-          {/* TODO: substituir href="#" pelo link do formulário de inscrição
-        </p> */}
       </main>
     </>
   );
