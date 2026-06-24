@@ -1,15 +1,14 @@
 import styleAccs from "./accs.module.css";
 
-import {fixedHours, recordingHours, unlimitedHours} from "@/data/accs";
-import {createLiArray} from "@/utils/createLiArray";
+import { fixedHours, recordingHours, unlimitedHours } from "@/data/accs";
+import { createLiArray } from "@/utils/createLiArray";
 
-import TopBar from "@/components/TopBar";
-import BackButton from "@/components/BackButton";
-import Header from "@/components/Header";
-import Category from "@/components/Category";
-import BodyText from "@/components/BodyText";
-import ListItem from "@/components/ListItem";
 import Aside from "@/components/Aside";
+import BackButton from "@/components/BackButton";
+import BodyText from "@/components/BodyText";
+import Category from "@/components/Category";
+import Header from "@/components/Header";
+import TopBar from "@/components/TopBar";
 
 
 
@@ -19,11 +18,20 @@ export default function ACCPage() {
       <TopBar />
       <main>
         <BackButton />
-        
+
         <Header titleText="Horas Complementares">
           São obrigatórias <strong>300 horas</strong> (360h/a) ao longo do curso.
           O aproveitamento é feito via requerimento à coordenação com os certificados comprobatórios.
         </Header>
+
+        <Aside>
+          📋 <strong>Como validar as horas:</strong> registre suas horas no{" "}
+          <a href={recordingHours.url} target="_blank" rel="noopener noreferrer">
+            {recordingHours.name}
+          </a>{" "}
+          e submeta os comprovantes à coordenação para análise. Casos não previstos
+          nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
+        </Aside>
 
         <Category titleText="Tabela 6 — Sem limite de aproveitamento">
           <BodyText>
@@ -33,7 +41,7 @@ export default function ACCPage() {
 
           <ul className={styleAccs.list}>
             {createLiArray(unlimitedHours)}
-            
+
             {/* {unlimitedHours.map((item) => (
               <li key={item} className={styleAccs.itemSemLimite}>
                 <div>
@@ -67,15 +75,6 @@ export default function ACCPage() {
             ))} */}
           </ul>
         </Category>
-
-        <Aside>
-          📋 <strong>Como validar as horas:</strong> registre suas horas no{" "}
-          <a href={recordingHours.url} target="_blank" rel="noopener noreferrer">
-            {recordingHours.name}
-          </a>{" "}
-          e submeta os comprovantes à coordenação para análise. Casos não previstos
-          nas tabelas são decididos pelo colegiado. Guarde todos os seus certificados.
-        </Aside>
 
         <Aside>
           <strong>Dica de Veterano:</strong> Começa desde o 1º período. Participar de eventos, congressos e

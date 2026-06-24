@@ -1,10 +1,10 @@
-import TopBar from "@/components/TopBar";
-import BackButton from "@/components/BackButton";
-import Header from "@/components/Header";
-import Category from "@/components/Category";
-import BodyText from "@/components/BodyText";
 import Aside from "@/components/Aside";
+import BackButton from "@/components/BackButton";
+import BodyText from "@/components/BodyText";
 import CallToAction from "@/components/CallToAction";
+import Category from "@/components/Category";
+import Header from "@/components/Header";
+import TopBar from "@/components/TopBar";
 
 
 

@@ -1,11 +1,11 @@
+import { academicCenter, classes, others } from "@/data/grupos";
 import styleGroup from "./grupos.module.css";
-import {classes, academicCenter, others} from "@/data/grupos";
 
-import TopBar from "@/components/TopBar";
-import BackButton from "@/components/BackButton";
-import Header from "@/components/Header";
-import Category from "@/components/Category";
 import Aside from "@/components/Aside";
+import BackButton from "@/components/BackButton";
+import Category from "@/components/Category";
+import Header from "@/components/Header";
+import TopBar from "@/components/TopBar";
 
 
 
