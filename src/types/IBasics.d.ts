@@ -5,6 +5,6 @@ interface NamedDesc extends Name { desc: string; }
 interface NDC extends NamedDesc { color: string; }
 
 interface TitleContent {
-   titleText: string;
-   children: React.ReactNode;
+  titleText: string;
+  children: React.ReactNode;
 }

@@ -8,6 +8,7 @@ import Category from "@/components/Category";
 import Card from "@/components/Card";
 import BigCard from "@/components/BigCard";
 import Label from "@/components/Label";
+import BodyText from "@/components/BodyText";
 import Aside from "@/components/Aside";
 
 
@@ -39,7 +40,12 @@ export default function InfraPage() {
               <BigCard key={name}>
                 <header style={{"--c-label": "#202020", "--accent-dim": color} as React.CSSProperties}>
                   <div>
-                    <Label>{tag}</Label>
+                    <span
+                      className={styleInfra.tag}
+                      style={ {backgroundColor: `${color}15`} }
+                    >{tag}</span>
+
+
                     <p style={{ marginTop: "8px" }}>{name}</p>
                   </div>
                   
@@ -57,7 +63,7 @@ export default function InfraPage() {
                   )}
                 </header>
                 
-                <p>{desc}</p>
+                <BodyText>{desc}</BodyText>
               </BigCard>
             ))}
           </div>

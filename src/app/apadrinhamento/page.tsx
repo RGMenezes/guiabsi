@@ -3,6 +3,7 @@ import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
 import Header from "@/components/Header";
 import Category from "@/components/Category";
+import BodyText from "@/components/BodyText";
 import Card from "@/components/Card";
 import CallToAction from "@/components/CallToAction";
 
@@ -21,16 +22,16 @@ export default function ApadrinhamentoPage() {
         </Header>
 
         <Category titleText="Como Funciona?">
-          <p>
+          <BodyText>
             Não é uma aula extra. É um contato direto — via WhatsApp ou
             presencial — com alguém de referência para as dúvidas que você
             tem vergonha de perguntar ao professor.
-          </p>
-          <p>
+          </BodyText>
+          <BodyText>
             Fazemos o <strong>match</strong> entre calouro e veterano com base
             no perfil de cada um. Preencha o formulário e a gente cuida do
             resto.
-          </p>
+          </BodyText>
         </Category>
 
         <Category titleText="O que o padrinho faz por você?">

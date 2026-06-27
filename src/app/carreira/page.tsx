@@ -49,18 +49,18 @@ export default function CarreiraPage() {
         </Category>
 
         <Category titleText="ACCs e Carreira">
-          <p>
+          <BodyText>
             Monitoria, bolsas, estágio e emprego na área entram todos na{" "}
             <strong>Tabela 6 de ACCs</strong> — sem teto e sem conversão.
             Submeta os comprovantes à coordenação para validação.
-          </p>
-          <p>
+          </BodyText>
+          <BodyText>
             Para ver a lista completa de atividades válidas e as paridades da
             Tabela 7 (publicações, certificações etc.), acesse a página de{" "}
             <Link href="/accs" style={{ color: "var(--accent)" }}>
               Horas Complementares
             </Link>.
-          </p>
+          </BodyText>
 
           <Aside>
             <strong>Dica de veterano:</strong> não foca só no dinheiro. Projetos de{" "}

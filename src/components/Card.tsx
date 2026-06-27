@@ -6,7 +6,7 @@ export default function Card({tagText, titleText, url, children}: cardAttr) {
       {tagText && (<span className={styleCard.linkTag}>{tagText}</span>)}
       <h3 className={styleCard.cardTitle}>{titleText}</h3>
       <p className={styleCard.cardBody}>{children}</p>
-
+         
       {
         url && (
           <div className={styleCard.urlContainer}>

@@ -1,4 +1,3 @@
-
 .section {
   display: flex;
   flex-flow: column nowrap;
@@ -17,5 +16,4 @@
   color: var(--accent);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 16px;
 }

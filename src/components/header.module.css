@@ -1,15 +1,10 @@
+.container {
+  margin-bottom: 60px;
+}
 
 .title {
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   color: var(--text-primary);
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  line-height: 1.7;
-  margin-bottom: 48px;
 }

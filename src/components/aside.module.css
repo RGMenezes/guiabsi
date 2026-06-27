@@ -1,9 +1,8 @@
-
 .aside {
   border: 1px solid rgba(255, 107, 53, 0.2);
   border-radius: var(--radius);
   padding: 16px 20px;
-  margin: 20px 0;
+  margin: 25px 0;
 
   background: rgba(255, 107, 53, 0.08);
   color: var(--text-secondary);
@@ -18,4 +17,7 @@
   transition: all .3s ease;
 }
 
-.aside strong, .aside a { color: #ff6b35; }
+.aside strong,
+.aside a {
+  color: #ff6b35;
+}

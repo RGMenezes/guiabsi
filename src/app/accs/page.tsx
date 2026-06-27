@@ -3,6 +3,11 @@ import styleAccs from "./accs.module.css";
 import { fixedHours, recordingHours, unlimitedHours } from "@/data/accs";
 import { createLiArray } from "@/utils/createLiArray";
 
+import TopBar from "@/components/TopBar";
+import BackButton from "@/components/BackButton";
+import Header from "@/components/Header";
+import Category from "@/components/Category";
+import BodyText from "@/components/BodyText";
 import Aside from "@/components/Aside";
 import BackButton from "@/components/BackButton";
 import BodyText from "@/components/BodyText";
@@ -41,15 +46,6 @@ export default function ACCPage() {
 
           <ul className={styleAccs.list}>
             {createLiArray(unlimitedHours)}
-
-            {/* {unlimitedHours.map((item) => (
-              <li key={item} className={styleAccs.itemSemLimite}>
-                <div>
-                  <span style={{color: "var(--accent)"}}>→ </span>
-                  {item}
-                </div>
-              </li>
-            ))} */}
           </ul>
         </Category>
 
@@ -61,18 +57,6 @@ export default function ACCPage() {
 
           <ul className={styleAccs.list}>
             {createLiArray(fixedHours)}
-
-            {/* {fixedHours.map((item) => (
-              <li key={item.atividade} className={styleAccs.rowConversao}>
-                <div>
-                  <span className={styleAccs.atividadeNome}>{item.atividade}</span>
-                </div>
-
-                <div style={{textAlign: "center"}}>
-                  <span className={styleAccs.paridade}>{item.paridade}</span>
-                </div>
-              </li>
-            ))} */}
           </ul>
         </Category>
 
