@@ -1,8 +1,5 @@
 "use client";
 
-import styles from "@/app/inner.module.css";
-import stylesButton from "./InstallButton.module.css";
-
 import { useEffect, useState } from "react";
 import { MdSmartphone } from "react-icons/md";
 

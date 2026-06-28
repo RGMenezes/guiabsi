@@ -3,19 +3,12 @@ import styleAccs from "./accs.module.css";
 import { fixedHours, recordingHours, unlimitedHours } from "@/data/accs";
 import { createLiArray } from "@/utils/createLiArray";
 
-import TopBar from "@/components/TopBar";
-import BackButton from "@/components/BackButton";
-import Header from "@/components/Header";
-import Category from "@/components/Category";
-import BodyText from "@/components/BodyText";
 import Aside from "@/components/Aside";
 import BackButton from "@/components/BackButton";
 import BodyText from "@/components/BodyText";
 import Category from "@/components/Category";
 import Header from "@/components/Header";
 import TopBar from "@/components/TopBar";
-
-
 
 export default function ACCPage() {
   return (
