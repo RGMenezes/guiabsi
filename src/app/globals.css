@@ -56,10 +56,6 @@ main {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a,
-a * {
   cursor: pointer;
 }
 
