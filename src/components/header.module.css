@@ -1,0 +1,10 @@
+.container {
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}

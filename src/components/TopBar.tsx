@@ -1,14 +1,14 @@
 import Link from "next/link";
-import styles from "./Nav.module.css";
+import styles from "./TopBar.module.css";
 import InstallButton from "./InstallButton";
 
-export default function Nav() {
+export default function TopBar() {
   return (
-    <nav className={styles.nav}>
+    <div className={styles.bar}>
       <Link href="/" className={styles.logo}>
         BSI<span className={styles.accent}>.</span>IFF
       </Link>
       <InstallButton />
-    </nav>
+    </div>
   );
 }

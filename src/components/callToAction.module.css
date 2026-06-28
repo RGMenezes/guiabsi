@@ -1,0 +1,23 @@
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+
+  font: 700 0.85rem var(--font-mono);
+  color: #0d0d0d;
+  background-color: var(--accent);
+
+  transition-property: opacity, transform;
+  transition-duration: 0.3s;
+
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}

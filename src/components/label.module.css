@@ -1,0 +1,28 @@
+.label {
+   font: 700 0.8rem var(--font-mono);
+   flex-shrink: 0;
+   white-space: nowrap;
+
+   padding: 3px 8px;
+   border-radius: 4px;
+}
+
+.static {
+   color: var(--c-label);
+   background-color: var(--accent-dim);
+}
+
+.dynamic {
+   color: var(--c-label);
+   background-color: transparent;
+   border: 1px solid var(--c-label);
+
+   transition-property: color, background-color, border-color;
+   transition-duration: 0.3s;
+}
+
+.dynamic:hover {
+   color: #101010;
+   background-color: var(--c-label);
+   border-color: transparent;
+}

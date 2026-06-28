@@ -1,0 +1,19 @@
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.containerFlow {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font: 500 0.85rem var(--font-mono);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

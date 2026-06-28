@@ -1,13 +1,16 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import styles from "@/app/inner.module.css";
-import stylesButton from "./InstallButton.module.css";
 import { MdSmartphone } from "react-icons/md";
+
+import CallToAction from "./CallToAction";
+
+
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
-}
+} // OK
 
 // Captura o evento fora do componente — persiste entre renders e navegações
 let cachedPrompt: BeforeInstallPromptEvent | null = null;
@@ -48,9 +51,9 @@ export default function InstallButton() {
   };
 
   return (
-    <button onClick={handleInstall} className={`${stylesButton.button} ${styles.ctaBtn}`}>
+    <CallToAction click={handleInstall}>
       Adicionar Atalho
       <MdSmartphone />
-    </button>
+    </CallToAction>
   );
 }

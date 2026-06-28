@@ -1,0 +1,15 @@
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--accent);
+}

@@ -1,0 +1,7 @@
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: space-evenly;
+  gap: 10px;
+}
