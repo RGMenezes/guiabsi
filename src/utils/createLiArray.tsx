@@ -1,7 +1,7 @@
 import ListItem from "@/components/ListItem";
 
-export function createLiArray(texts: listElement[]): React.ReactNode | null {
-  const result: any[] = [], size: number = texts.length;
+export function createLiArray(texts: HoursTypesData[]): React.ReactNode | null {
+  const result: React.ReactNode[] = [], size: number = texts.length;
 
   for (let index = 0; index < size; index++) {
     result.push(
