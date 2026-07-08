@@ -44,6 +44,12 @@ const docServices: PortalsData[] = [
     tag: null,
     desc: "Plano de curso do Bacharelado em Sistemas de Informação. Tudo que você precisa saber sobre o curso, desde a matriz curricular até as competências que deve desenvolver.",
     url: "https://portal1.iff.edu.br/nossos-campi/campos-centro/cursos-nova-interface/cursos-superiores/pasta-com-documentos-do-curso-de-bacharelado-em-sistemas-de-informacao/resolucao-consup-ifflu-n-304-de-23-de-janeiro-de-2025-2-1.pdf/view"
+  },
+  {
+    name: "Estatuto do Centro Acadêmico (CA)",
+    tag: null,
+    desc: "Estatuto do Centro Acadêmico Alan Turing, entidade que representa os alunos do curso de Bacharelado em Sistemas de Informação.",
+    url: "/docs/Estatuto_CA_Alan_Turing.pdf"
   }
 ];
 
@@ -77,4 +83,13 @@ const virtualClassrooms: PortalsData[] = [
   }
 ];
 
-export {academicLife, docServices, opportunities, virtualClassrooms};
+const contributeToThisProject: PortalsData[] = [
+  {
+    name: "Guia BSI",
+    tag: null,
+    desc: "Contribua com o desenvolvimento deste site e ajude a facilitar a vida dos estudantes de SI.",
+    url: "https://github.com/RGMenezes/guiabsi.git"
+  }
+];
+
+export {academicLife, docServices, opportunities, virtualClassrooms, contributeToThisProject};

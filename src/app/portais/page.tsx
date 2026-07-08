@@ -1,5 +1,5 @@
 import linkStyles from "./portais.module.css";
-import {academicLife, docServices, opportunities, virtualClassrooms} from "@/data/portais";
+import {academicLife, docServices, opportunities, virtualClassrooms, contributeToThisProject} from "@/data/portais";
 
 import TopBar from "@/components/TopBar";
 import BackButton from "@/components/BackButton";
@@ -69,8 +69,24 @@ export default function LinksPage() {
           ))}
         </Category>
 
-        <Category titleText="Documentos & Serviços" divider={false}>
+        <Category titleText="Documentos & Serviços">
           {docServices.map(({name, url, desc, tag}) => (
+            <a
+              key={name}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkStyles.linkCard}
+            >
+              <Card tagText={tag ? tag : undefined} titleText={name} url={url}>
+                {desc}
+              </Card>
+            </a>
+          ))}
+        </Category>
+
+        <Category titleText="Contribua com este projeto" divider={false}>
+          {contributeToThisProject.map(({name, url, desc, tag}) => (
             <a
               key={name}
               href={url}
