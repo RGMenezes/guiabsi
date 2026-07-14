@@ -12,6 +12,13 @@ interface callToActionAttr {
 
 interface categoryAttr extends TitleContent { divider?: boolean; }
 
+interface figureAttr {
+  img: string;
+  alt: string;
+  landscape?: boolean;
+  children: React.ReactNode;
+}
+
 interface headerAttr extends TitleContent {}
 
 interface labelAttr {

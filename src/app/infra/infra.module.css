@@ -5,26 +5,6 @@
   margin-top: 20px;
 }
 
-/* .infraCard {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 20px;
-  border-radius: var(--radius);
-}
-
-.infraCard strong {
-  display: block;
-  color: var(--hero-accent);
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-}
-
-.infraCard p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  opacity: 0.8;
-} */
-
 .equipeList {
   display: flex;
   flex-direction: column;
