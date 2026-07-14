@@ -1,0 +1,21 @@
+.list,
+.list>li {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.list {
+  counter-reset: item;
+  gap: 25px;
+}
+
+
+
+.list>li {
+  gap: 12px;
+}
+
+.list>li::before {
+  counter-increment: item;
+  content: "Passo " counter(item) ":";
+}
