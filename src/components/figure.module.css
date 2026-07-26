@@ -1,0 +1,24 @@
+.portrait {
+  width: 33%;
+}
+
+.landscape {
+  width: 80%;
+}
+
+.figure>img {
+  width: 100%;
+  height: auto;
+}
+
+.landscape>figcaption {
+  text-align: center;
+}
+
+@media only screen and (max-width: 375px) {
+
+  .portrait,
+  .landscape {
+    width: 100%;
+  }
+}

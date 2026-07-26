@@ -50,4 +50,11 @@ interface trilhasData {
   software: NamedColor;
 }
 
+interface tutorialsData {
+  categoryName: string;
+  desc: string;
+  alert: React.reactNode | null;
+  rules: {action: string; image: string; alternative: string; landscape: boolean; caption: string;}[];
+}
+
 interface veteranWorksData extends NamedDesc {}

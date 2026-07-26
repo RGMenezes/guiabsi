@@ -1,6 +1,13 @@
 
 export const cards: cardsData[] = [
   {
+    href: "/tutoriais",
+    tag: "Primeiros Passos",
+    name: "Guia dos Portais",
+    desc: "Um tutorial para navegar nos portais pelas primeiras vezes.",
+    color: "#ff3030"
+  },
+  {
     href: "/portais",
     tag: "Acesso Diário",
     name: "Portais e Links",
