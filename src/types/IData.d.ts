@@ -58,3 +58,10 @@ interface tutorialsData {
 }
 
 interface veteranWorksData extends NamedDesc {}
+
+
+interface videosData {
+  title: string;
+  desc: string;
+  youtubeId: string;
+}
