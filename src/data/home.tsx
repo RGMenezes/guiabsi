@@ -22,6 +22,13 @@ export const cards: cardsData[] = [
     color: "#25d366"
   },
   {
+    href: "/videos",
+    tag: "Informações",
+    name: "Vídeos de localização",
+    desc: "Vídeos rápidos para ajudar você a se localizar no campus.",
+    color: "#366B0F"
+  },
+  {
     href: "/drive",
     tag: "Repositório",
     name: "Drive de Provas",
