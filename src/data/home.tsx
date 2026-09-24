@@ -57,6 +57,13 @@ export const cards: cardsData[] = [
     color: "#ffcc00"
   },
   {
+    href: "/picg",
+    tag: "Virar pesquisador",
+    name: "Polo de Inovação",
+    desc: "O que é e como entrar no PICG.",
+    color: "#7a42fd"
+  },
+  {
     href: "/apadrinhamento",
     tag: "Mentoria",
     name: "Apadrinhamento",
