@@ -6,6 +6,10 @@ import BodyText from "@/components/BodyText";
 import GridBox from "@/components/GridBox";
 import Card from "@/components/Card";
 import Aside from "@/components/Aside";
+import BoxContacts from "@/components/BoxContacts";
+import Contact from "@/components/Contact";
+
+import { importantLinks, contacts } from "@/data/picg";
 
 export default function PageOfPICG() {
   return (
@@ -35,52 +39,37 @@ export default function PageOfPICG() {
 
         <Category titleText="Como entrar?">
           <BodyText>
-            Se realmente possui o necessário e deseja trilhar essa trajetória científica, é
-            importante que você se atente...
+            Se você realmente possui o necessário e deseja trilhar essa trajetória científica, é
+            importante se atentar...
           </BodyText>
           
           <GridBox>
-            <a
-              href="https://www.instagram.com/iff.picg/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Card titleText="Ao Instagram" url="https://www.instagram.com/iff.picg/">
-                A instituição sempre atualiza sua rede social sobre eventos e processos seletivos.
-              </Card>
-            </a>
-            <a
-              href="https://selecoes.iff.edu.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Card titleText="Ao Portal de Seleções" url="https://selecoes.iff.edu.br/">
-                De nada adianta saber do processo e não se inscrever. Adquira sua cópia do edital
-                e crie sua inscrição aqui.
-              </Card>
-            </a>
-            <a
-              href="https://linktr.ee/iff.picg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Card titleText="Ao Site Oficial do PICG" url="https://linktr.ee/iff.picg">
-                Aqui, tudo relacionado à PICG está melhor organizado. Saiba o que ainda está em
-                andamento por aqui.
-              </Card>
-            </a>
+            {importantLinks.map(({link, title, desc}) => (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={title}
+              >
+                <Card titleText={title} url={link}>
+                  {desc}
+                </Card>
+              </a>
+            ))}
           </GridBox>
 
           <Aside>
             Vale destacar que, como é um centro de desenvolvimento científico, todas as vagas
             ofertadas são destinadas a quem <strong>já possui</strong> elevado grau de
-            instrução, ou seja,de ensino superior (quase) completo em diante.
+            instrução, ou seja, de ensino superior (quase) completo em diante.
           </Aside>
         </Category>
 
-        <footer>
-          Coming Soon...
-        </footer>
+        <BoxContacts>
+          {contacts.map(({contactMethod, data}) => (
+            <Contact key={data} chanel={contactMethod}>{data}</Contact>
+          ))}
+        </BoxContacts>
       </main>
     </>
   );

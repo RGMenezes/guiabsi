@@ -3,21 +3,21 @@ import Image from "next/image";
 
 function initContact(): contact {
   interface IconsTypes {
-    whatsapp?: string;
+    whatsapp? : string;
     instagram?: string;
-    facebook?: string;
-    discord?: string;
-    linkedin?: string;
-    email?: string;
+    facebook? : string;
+    discord?  : string;
+    linkedin? : string;
+    email?    : string;
   }
 
   const icons: IconsTypes = {
-    whatsapp: "/images/social_media/logo_whatsapp.png",
+    whatsapp : "/images/social_media/logo_whatsapp.png",
     instagram: "/images/social_media/logo_instagram.png",
-    facebook: "/images/social_media/logo_facebook.png",
-    discord: "/images/social_media/logo_discord.png",
-    linkedin: "/images/social_media/logo_linkedin.png",
-    email: "/images/social_media/logo_email.png"
+    facebook : "/images/social_media/logo_facebook.png",
+    discord  : "/images/social_media/logo_discord.png",
+    linkedin : "/images/social_media/logo_linkedin.png",
+    email    : "/images/social_media/logo_email.png"
   };
 
   /* Não é bug! O ESlint apenas acusa componente sem nome. */
@@ -27,7 +27,7 @@ function initContact(): contact {
         <Image
           src={`${icons[chanel]}`}
           alt={`${chanel}`}
-          width={40}
+          width= {40}
           height={40}
         />
         <span className={StyleContact.data}>{children}</span>
