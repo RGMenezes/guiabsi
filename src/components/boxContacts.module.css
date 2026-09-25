@@ -1,0 +1,16 @@
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.credits {
+  font-weight: 200;
+  font-size: 10px;
+  color: var(--text-secondary);
+
+  &>a {
+    text-decoration: underline;
+  }
+}

@@ -45,6 +45,11 @@ A seguir, uma explicação breve de cada componente atualmente existente.
 * **Tipo de Tag:** Aberta.
 * **Atributos:** ...
 
+### BoxContacts
+* **Definição:** Uma caixa footer destinada a informações de contato.
+* **Tipo de Tag:** Aberta.
+* **Atributos:** ...
+
 ### CallToAction
 * **Definição:** Um botão/link que lava a ações fora do Guia.
 * **Tipo de Tag:** Aberta.
@@ -59,6 +64,11 @@ A seguir, uma explicação breve de cada componente atualmente existente.
 * **Definição:** Um section com elemento hr facultativo e título.
 * **Tipo de Tag:** Aberta.
 * **Atributos:** titleText, ?divider.
+
+### Contact
+* **Definição:** Um elemento de informações para contato.
+* **Tipo de Tag:** Aberta.
+* **Atributos:** chanel.
 
 ### GridBox
 * **Definição:** Um div para exibição em grid display.

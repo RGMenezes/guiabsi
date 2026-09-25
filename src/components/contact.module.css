@@ -1,0 +1,14 @@
+.box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.data {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
