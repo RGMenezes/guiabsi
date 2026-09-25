@@ -15,6 +15,7 @@ function initContact(): contact {
     facebook?: string;
     discord?: string;
     linkedin?: string;
+    email?: string;
   }
 
   const icons: IconsTypes = {
@@ -22,7 +23,8 @@ function initContact(): contact {
     instagram: "/images/social_media/logo_instagram.png",
     facebook: "/images/social_media/logo_facebook.png",
     discord: "/images/social_media/logo_discord.png",
-    linkedin: "/images/social_media/logo_linkedin.png"
+    linkedin: "/images/social_media/logo_linkedin.png",
+    email: "/images/social_media/logo_email.png"
   };
 
   return (({chanel, children}) => (
