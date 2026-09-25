@@ -1,13 +1,6 @@
 import StyleContact from "./contact.module.css";
 import Image from "next/image";
 
-interface InitAttrs {
-  chanel: string;
-  children: React.ReactNode;
-}
-
-type contact = ({chanel, children}: InitAttrs) => React.ReactNode;
-
 function initContact(): contact {
   interface IconsTypes {
     whatsapp?: string;
@@ -27,6 +20,7 @@ function initContact(): contact {
     email: "/images/social_media/logo_email.png"
   };
 
+  /* Não é bug! O ESlint apenas acusa componente sem nome. */
   return (({chanel, children}) => (
     <>
       <div className={StyleContact.box}>
@@ -42,5 +36,5 @@ function initContact(): contact {
   ));
 }
 
-const Contact: contact = initContact();
+const Contact: contact = initContact(); // O componente "sem nome" é o <Contact>
 export default Contact;

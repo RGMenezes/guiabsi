@@ -1,0 +1,1 @@
+type contact = ({chanel, children}: initContactAttr) => React.ReactNode;

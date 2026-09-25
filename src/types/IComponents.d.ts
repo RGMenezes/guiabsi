@@ -21,6 +21,11 @@ interface figureAttr {
 
 interface headerAttr extends TitleContent {}
 
+interface initContactAttr {
+  chanel: string;
+  children: React.ReactNode;
+}
+
 interface labelAttr {
   dynamic?: boolean;
   children: React.ReactNode;
