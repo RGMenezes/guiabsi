@@ -30,7 +30,7 @@ function initContact(): contact {
           width= {40}
           height={40}
         />
-        <span className={StyleContact.data}>{children}</span>
+        <span>{children}</span>
       </div>
     </>
   ));
