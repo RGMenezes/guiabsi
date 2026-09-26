@@ -65,7 +65,7 @@ export default function PageOfPICG() {
           </Aside>
         </Category>
 
-        <BoxContacts>
+        <BoxContacts titleText="o PICG">
           {contacts.map(({contactMethod, data}) => (
             <Contact key={data} chanel={contactMethod}>{data}</Contact>
           ))}
