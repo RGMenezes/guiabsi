@@ -4,4 +4,4 @@
 *Horas dedicadas:* 42h:30min.
 
 *nome:* Ítalo Hespanhol Peres.
-*Horas dedicadas:* 5h:32min.
+*Horas dedicadas:* 8h:20min.
