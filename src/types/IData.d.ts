@@ -4,6 +4,11 @@ interface cardsData extends NDC {
   tag: string;
 }
 
+interface contactsData {
+  contactMethod: ChanelOptions;
+  data: string
+}
+
 interface faqsData {
   category: string;
   doubts: {question: string, answer: string;}[];
@@ -17,6 +22,12 @@ interface HoursTypesData { // 'unlimited' and 'fixed' tables
 interface LinkWithIconData extends Name { // data of 'Groups' page
   link: string;
   icon: React.ReactNode;
+}
+
+interface importantLinksData {
+  link: string;
+  title: string;
+  desc: string
 }
 
 interface PortalsData extends NamedDesc { // data of the 'Portals' page
@@ -58,3 +69,10 @@ interface tutorialsData {
 }
 
 interface veteranWorksData extends NamedDesc {}
+
+
+interface videosData {
+  title: string;
+  desc: string;
+  youtubeId: string;
+}

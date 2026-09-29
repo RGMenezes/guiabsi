@@ -22,6 +22,13 @@ export const cards: cardsData[] = [
     color: "#25d366"
   },
   {
+    href: "/videos",
+    tag: "Informações",
+    name: "Vídeos de localização",
+    desc: "Vídeos rápidos para ajudar você a se localizar no campus.",
+    color: "#366B0F"
+  },
+  {
     href: "/drive",
     tag: "Repositório",
     name: "Drive de Provas",
@@ -48,6 +55,13 @@ export const cards: cardsData[] = [
     name: "Carreira e Oportunidades",
     desc: "Regras para estágio, bolsas e oportunidades de carreira.",
     color: "#ffcc00"
+  },
+  {
+    href: "/picg",
+    tag: "Virar pesquisador",
+    name: "Polo de Inovação",
+    desc: "O que é e como entrar no PICG.",
+    color: "#7a42fd"
   },
   {
     href: "/apadrinhamento",
