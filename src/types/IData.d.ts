@@ -5,7 +5,7 @@ interface cardsData extends NDC {
 }
 
 interface contactsData {
-  contactMethod: string;
+  contactMethod: ChanelOptions;
   data: string
 }
 
