@@ -19,5 +19,5 @@
 
 .aside strong,
 .aside a {
-  color: #ff6b35;
+  color: var(--accent-2);
 }

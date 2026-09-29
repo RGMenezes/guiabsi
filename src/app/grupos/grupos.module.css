@@ -12,7 +12,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: background 0.2s, border-color 0.2s;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
 }
 
 .groupCard:hover {
@@ -34,7 +34,7 @@
 .arrow {
   color: var(--text-muted);
   font-family: var(--font-mono);
-  transition: color 0.2s, transform 0.2s;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .groupCard:hover .arrow {
