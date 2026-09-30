@@ -22,7 +22,7 @@ interface figureAttr {
 interface headerAttr extends TitleContent {}
 
 interface initContactAttr {
-  chanel  : string;
+  chanel  : ChanelOptions;
   children: React.ReactNode;
 }
 

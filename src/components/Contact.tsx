@@ -3,12 +3,12 @@ import Image from "next/image";
 
 function initContact(): contact {
   interface IconsTypes {
-    whatsapp? : string;
-    instagram?: string;
-    facebook? : string;
-    discord?  : string;
-    linkedin? : string;
-    email?    : string;
+    whatsapp : string;
+    instagram: string;
+    facebook : string;
+    discord  : string;
+    linkedin : string;
+    email    : string;
   }
 
   const icons: IconsTypes = {
