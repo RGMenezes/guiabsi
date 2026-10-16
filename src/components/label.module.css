@@ -3,7 +3,7 @@
    flex-shrink: 0;
    white-space: nowrap;
 
-   padding: 3px 8px;
+   padding: var(--space-3) var(--space-8);
    border-radius: var(--radius-sm);
 }
 

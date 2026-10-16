@@ -3,6 +3,6 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
-  padding: 10px 0;
+  gap: var(--space-20);
+  padding: var(--space-10) 0;
 }

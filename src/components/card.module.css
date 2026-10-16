@@ -2,9 +2,9 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-10);
 
-  padding: 20px;
+  padding: var(--space-20);
   background: var(--bg-card);
   position: relative; /* Pode haver um ::before */
 
@@ -17,7 +17,7 @@
   font-family: var(--font-mono);
   font-size: 1.1rem;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-8);
 }
 
 .cardBody {
@@ -33,7 +33,7 @@
 .link {
   width: 100%; /* Sempre dentro de um elemento de link */
   height: 100%;
-  padding: 28px 24px !important;
+  padding: var(--space-28) var(--space-24) !important;
 
   transition: all var(--transition-fast) ease;
   --card-accent: inherit;
@@ -75,7 +75,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  gap: 10px;
+  gap: var(--space-10);
   width: 95%;
   transition: transform var(--transition-fast);
 }

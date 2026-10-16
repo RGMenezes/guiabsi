@@ -1,12 +1,12 @@
 .section {
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
-  margin-bottom: 40px;
+  gap: var(--space-20);
+  margin-bottom: var(--space-40);
 }
 
 .containerFlow {
   display: flex;
   flex-flow: column nowrap;
-  gap: 10px;
+  gap: var(--space-10);
 }

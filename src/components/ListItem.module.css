@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 13px;
-  padding: 12px 16px;
+  gap: var(--space-13);
+  padding: var(--space-12) var(--space-16);
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -16,7 +16,7 @@
 .arrow {
   color: var(--accent);
   font-family: var(--font-mono);
-  margin-top: 1px;
+  margin-top: var(--space-1);
 }
 
 .label {
@@ -28,6 +28,6 @@
   background: var(--accent-dim);
   border: 1px solid rgba(0, 229, 160, 0.2);
   border-radius: var(--radius-sm);
-  padding: 3px 8px;
+  padding: var(--space-3) var(--space-8);
   flex-shrink: 0;
 }

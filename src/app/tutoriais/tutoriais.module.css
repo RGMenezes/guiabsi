@@ -6,13 +6,13 @@
 
 .list {
   counter-reset: item;
-  gap: 25px;
+  gap: var(--space-25);
 }
 
 
 
 .list>li {
-  gap: 12px;
+  gap: var(--space-12);
 }
 
 .list>li::before {

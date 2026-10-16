@@ -1,6 +1,6 @@
 .bar {
   z-index: var(--z-header);
-  padding: 16px 24px;
+  padding: var(--space-16) var(--space-24);
   border-bottom: 1px solid var(--border);
   background: rgba(13, 13, 13, 0.85);
   backdrop-filter: blur(12px);
@@ -9,7 +9,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  gap: var(--space-5);
 }
 
 .logo {

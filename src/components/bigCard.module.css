@@ -2,9 +2,9 @@
 .bigCard {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-10);
 
-  padding: 20px;
+  padding: var(--space-20);
   background: var(--bg-card);
   position: relative; /* Pode haver um ::before */
 
@@ -17,5 +17,5 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-12);
 }

@@ -1,9 +1,9 @@
 .legenda {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 15px;
+  gap: var(--space-15);
+  margin-bottom: var(--space-30);
+  padding: var(--space-15);
   background: var(--bg-card);
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -12,7 +12,7 @@
 .legendaItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
 .dot {
@@ -24,33 +24,33 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: var(--space-20);
 }
 
 .periodoCard {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: var(--space-20);
 }
 
 .periodoLabel {
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-15);
   color: var(--text-primary);
   border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
+  padding-bottom: var(--space-8);
 }
 
 .lista {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-10);
 }
 
 .disciplina {
-  padding: 8px 12px;
+  padding: var(--space-8) var(--space-12);
   background: rgba(255, 255, 255, 0.03);
   font-size: 0.9rem;
   border-radius: var(--radius-sm);
@@ -60,11 +60,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
+  padding: var(--space-8) var(--space-12);
   background: rgba(255, 255, 255, 0.03);
   font-size: 0.85rem;
   border-radius: var(--radius-sm);
-  margin-bottom: 4px;
+  margin-bottom: var(--space-4);
 }
 
 .hora {
